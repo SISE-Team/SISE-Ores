@@ -1,0 +1,1269 @@
+{
+  "version": 3,
+  "priority": [
+    "mekanism",
+    "mekmm",
+    "modern_industrialization",
+    "oritech",
+    "enderio",
+    "ltxi",
+    "neoecoae",
+    "iceandfire",
+    "cakesticklib"
+  ],
+  "excluded": [
+    "oritech:biosteel_ingot"
+  ],
+  "materials": [
+    {
+      "name": "iron_dust",
+      "material": "iron",
+      "form": "dusts",
+      "preferred": "mekanism:dust_iron",
+      "members": [
+        "cakesticklib:iron_dust",
+        "enderio:powdered_iron",
+        "mekanism:dust_iron",
+        "modern_industrialization:iron_dust",
+        "neoecoae:iron_dust",
+        "oritech:iron_dust"
+      ],
+      "tag": "c:dusts/iron"
+    },
+    {
+      "name": "gold_dust",
+      "material": "gold",
+      "form": "dusts",
+      "preferred": "mekanism:dust_gold",
+      "members": [
+        "cakesticklib:gold_dust",
+        "enderio:powdered_gold",
+        "mekanism:dust_gold",
+        "modern_industrialization:gold_dust",
+        "oritech:gold_dust"
+      ],
+      "tag": "c:dusts/gold"
+    },
+    {
+      "name": "copper_dust",
+      "material": "copper",
+      "form": "dusts",
+      "preferred": "mekanism:dust_copper",
+      "members": [
+        "cakesticklib:copper_dust",
+        "enderio:powdered_copper",
+        "mekanism:dust_copper",
+        "modern_industrialization:copper_dust",
+        "oritech:copper_dust"
+      ],
+      "tag": "c:dusts/copper"
+    },
+    {
+      "name": "tin_ingot",
+      "material": "tin",
+      "form": "ingots",
+      "preferred": "mekanism:ingot_tin",
+      "members": [
+        "mekanism:ingot_tin",
+        "modern_industrialization:tin_ingot"
+      ],
+      "tag": "c:ingots/tin"
+    },
+    {
+      "name": "tin_nugget",
+      "material": "tin",
+      "form": "nuggets",
+      "preferred": "mekanism:nugget_tin",
+      "members": [
+        "mekanism:nugget_tin",
+        "modern_industrialization:tin_nugget"
+      ],
+      "tag": "c:nuggets/tin"
+    },
+    {
+      "name": "tin_dust",
+      "material": "tin",
+      "form": "dusts",
+      "preferred": "mekanism:dust_tin",
+      "members": [
+        "enderio:powdered_tin",
+        "mekanism:dust_tin",
+        "modern_industrialization:tin_dust"
+      ],
+      "tag": "c:dusts/tin"
+    },
+    {
+      "name": "tin_block",
+      "material": "tin",
+      "form": "storage_blocks",
+      "preferred": "mekanism:block_tin",
+      "members": [
+        "mekanism:block_tin",
+        "modern_industrialization:tin_block"
+      ],
+      "tag": "c:storage_blocks/tin"
+    },
+    {
+      "name": "lead_ingot",
+      "material": "lead",
+      "form": "ingots",
+      "preferred": "mekanism:ingot_lead",
+      "members": [
+        "mekanism:ingot_lead",
+        "modern_industrialization:lead_ingot"
+      ],
+      "tag": "c:ingots/lead"
+    },
+    {
+      "name": "lead_nugget",
+      "material": "lead",
+      "form": "nuggets",
+      "preferred": "mekanism:nugget_lead",
+      "members": [
+        "mekanism:nugget_lead",
+        "modern_industrialization:lead_nugget"
+      ],
+      "tag": "c:nuggets/lead"
+    },
+    {
+      "name": "lead_dust",
+      "material": "lead",
+      "form": "dusts",
+      "preferred": "mekanism:dust_lead",
+      "members": [
+        "mekanism:dust_lead",
+        "modern_industrialization:lead_dust"
+      ],
+      "tag": "c:dusts/lead"
+    },
+    {
+      "name": "lead_block",
+      "material": "lead",
+      "form": "storage_blocks",
+      "preferred": "mekanism:block_lead",
+      "members": [
+        "mekanism:block_lead",
+        "modern_industrialization:lead_block"
+      ],
+      "tag": "c:storage_blocks/lead"
+    },
+    {
+      "name": "silver_ingot",
+      "material": "silver",
+      "form": "ingots",
+      "preferred": "mekmm:ingot_silver",
+      "members": [
+        "iceandfire:silver_ingot",
+        "ltxi:silver_ingot",
+        "mekmm:ingot_silver",
+        "modern_industrialization:silver_ingot"
+      ],
+      "tag": "c:ingots/silver"
+    },
+    {
+      "name": "silver_nugget",
+      "material": "silver",
+      "form": "nuggets",
+      "preferred": "mekmm:nugget_silver",
+      "members": [
+        "iceandfire:silver_nugget",
+        "ltxi:silver_nugget",
+        "mekmm:nugget_silver",
+        "modern_industrialization:silver_nugget"
+      ],
+      "tag": "c:nuggets/silver"
+    },
+    {
+      "name": "silver_dust",
+      "material": "silver",
+      "form": "dusts",
+      "preferred": "mekmm:dust_silver",
+      "members": [
+        "ltxi:silver_dust",
+        "mekmm:dust_silver",
+        "modern_industrialization:silver_dust"
+      ],
+      "tag": "c:dusts/silver"
+    },
+    {
+      "name": "silver_block",
+      "material": "silver",
+      "form": "storage_blocks",
+      "preferred": "mekmm:block_silver",
+      "members": [
+        "iceandfire:silver_block",
+        "ltxi:silver_block",
+        "mekmm:block_silver",
+        "modern_industrialization:silver_block"
+      ],
+      "tag": "c:storage_blocks/silver"
+    },
+    {
+      "name": "nickel_ingot",
+      "material": "nickel",
+      "form": "ingots",
+      "preferred": "modern_industrialization:nickel_ingot",
+      "members": [
+        "modern_industrialization:nickel_ingot",
+        "oritech:nickel_ingot"
+      ],
+      "tag": "c:ingots/nickel"
+    },
+    {
+      "name": "nickel_nugget",
+      "material": "nickel",
+      "form": "nuggets",
+      "preferred": "modern_industrialization:nickel_nugget",
+      "members": [
+        "modern_industrialization:nickel_nugget",
+        "oritech:nickel_nugget"
+      ],
+      "tag": "c:nuggets/nickel"
+    },
+    {
+      "name": "nickel_dust",
+      "material": "nickel",
+      "form": "dusts",
+      "preferred": "modern_industrialization:nickel_dust",
+      "members": [
+        "modern_industrialization:nickel_dust",
+        "oritech:nickel_dust"
+      ],
+      "tag": "c:dusts/nickel"
+    },
+    {
+      "name": "nickel_block",
+      "material": "nickel",
+      "form": "storage_blocks",
+      "preferred": "modern_industrialization:nickel_block",
+      "members": [
+        "modern_industrialization:nickel_block",
+        "oritech:nickel"
+      ],
+      "tag": "c:storage_blocks/nickel"
+    },
+    {
+      "name": "aluminum_ingot",
+      "material": "aluminum",
+      "form": "ingots",
+      "preferred": "modern_industrialization:aluminum_ingot",
+      "members": [
+        "modern_industrialization:aluminum_ingot",
+        "neoecoae:aluminum_ingot"
+      ],
+      "tag": "c:ingots/aluminum"
+    },
+    {
+      "name": "aluminum_nugget",
+      "material": "aluminum",
+      "form": "nuggets",
+      "preferred": "modern_industrialization:aluminum_nugget",
+      "members": [
+        "modern_industrialization:aluminum_nugget"
+      ],
+      "tag": "c:nuggets/aluminum"
+    },
+    {
+      "name": "aluminum_dust",
+      "material": "aluminum",
+      "form": "dusts",
+      "preferred": "modern_industrialization:aluminum_dust",
+      "members": [
+        "modern_industrialization:aluminum_dust",
+        "neoecoae:aluminum_dust"
+      ],
+      "tag": "c:dusts/aluminum"
+    },
+    {
+      "name": "aluminum_block",
+      "material": "aluminum",
+      "form": "storage_blocks",
+      "preferred": "modern_industrialization:aluminum_block",
+      "members": [
+        "modern_industrialization:aluminum_block",
+        "neoecoae:aluminum_block"
+      ],
+      "tag": "c:storage_blocks/aluminum"
+    },
+    {
+      "name": "platinum_ingot",
+      "material": "platinum",
+      "form": "ingots",
+      "preferred": "modern_industrialization:platinum_ingot",
+      "members": [
+        "modern_industrialization:platinum_ingot",
+        "oritech:platinum_ingot"
+      ],
+      "tag": "c:ingots/platinum"
+    },
+    {
+      "name": "platinum_nugget",
+      "material": "platinum",
+      "form": "nuggets",
+      "preferred": "modern_industrialization:platinum_nugget",
+      "members": [
+        "modern_industrialization:platinum_nugget",
+        "oritech:platinum_nugget"
+      ],
+      "tag": "c:nuggets/platinum"
+    },
+    {
+      "name": "platinum_dust",
+      "material": "platinum",
+      "form": "dusts",
+      "preferred": "modern_industrialization:platinum_dust",
+      "members": [
+        "modern_industrialization:platinum_dust",
+        "oritech:platinum_dust"
+      ],
+      "tag": "c:dusts/platinum"
+    },
+    {
+      "name": "platinum_block",
+      "material": "platinum",
+      "form": "storage_blocks",
+      "preferred": "modern_industrialization:platinum_block",
+      "members": [
+        "modern_industrialization:platinum_block",
+        "oritech:platinum"
+      ],
+      "tag": "c:storage_blocks/platinum"
+    },
+    {
+      "name": "titanium_ingot",
+      "material": "titanium",
+      "form": "ingots",
+      "preferred": "modern_industrialization:titanium_ingot",
+      "members": [
+        "ltxi:titanium_ingot",
+        "modern_industrialization:titanium_ingot"
+      ],
+      "tag": "c:ingots/titanium"
+    },
+    {
+      "name": "titanium_nugget",
+      "material": "titanium",
+      "form": "nuggets",
+      "preferred": "modern_industrialization:titanium_nugget",
+      "members": [
+        "ltxi:titanium_nugget",
+        "modern_industrialization:titanium_nugget"
+      ],
+      "tag": "c:nuggets/titanium"
+    },
+    {
+      "name": "titanium_dust",
+      "material": "titanium",
+      "form": "dusts",
+      "preferred": "modern_industrialization:titanium_dust",
+      "members": [
+        "ltxi:titanium_dust",
+        "modern_industrialization:titanium_dust"
+      ],
+      "tag": "c:dusts/titanium"
+    },
+    {
+      "name": "titanium_block",
+      "material": "titanium",
+      "form": "storage_blocks",
+      "preferred": "modern_industrialization:titanium_block",
+      "members": [
+        "ltxi:titanium_block",
+        "modern_industrialization:titanium_block"
+      ],
+      "tag": "c:storage_blocks/titanium"
+    },
+    {
+      "name": "tungsten_ingot",
+      "material": "tungsten",
+      "form": "ingots",
+      "preferred": "modern_industrialization:tungsten_ingot",
+      "members": [
+        "modern_industrialization:tungsten_ingot",
+        "neoecoae:tungsten_ingot"
+      ],
+      "tag": "c:ingots/tungsten"
+    },
+    {
+      "name": "tungsten_nugget",
+      "material": "tungsten",
+      "form": "nuggets",
+      "preferred": "modern_industrialization:tungsten_nugget",
+      "members": [
+        "modern_industrialization:tungsten_nugget"
+      ],
+      "tag": "c:nuggets/tungsten"
+    },
+    {
+      "name": "tungsten_dust",
+      "material": "tungsten",
+      "form": "dusts",
+      "preferred": "modern_industrialization:tungsten_dust",
+      "members": [
+        "modern_industrialization:tungsten_dust",
+        "neoecoae:tungsten_dust"
+      ],
+      "tag": "c:dusts/tungsten"
+    },
+    {
+      "name": "tungsten_block",
+      "material": "tungsten",
+      "form": "storage_blocks",
+      "preferred": "modern_industrialization:tungsten_block",
+      "members": [
+        "modern_industrialization:tungsten_block",
+        "neoecoae:tungsten_block"
+      ],
+      "tag": "c:storage_blocks/tungsten"
+    },
+    {
+      "name": "uranium_ingot",
+      "material": "uranium",
+      "form": "ingots",
+      "preferred": "mekanism:ingot_uranium",
+      "members": [
+        "mekanism:ingot_uranium",
+        "modern_industrialization:uranium_ingot"
+      ],
+      "tag": "c:ingots/uranium"
+    },
+    {
+      "name": "uranium_nugget",
+      "material": "uranium",
+      "form": "nuggets",
+      "preferred": "mekanism:nugget_uranium",
+      "members": [
+        "mekanism:nugget_uranium",
+        "modern_industrialization:uranium_nugget"
+      ],
+      "tag": "c:nuggets/uranium"
+    },
+    {
+      "name": "uranium_dust",
+      "material": "uranium",
+      "form": "dusts",
+      "preferred": "mekanism:dust_uranium",
+      "members": [
+        "mekanism:dust_uranium",
+        "modern_industrialization:uranium_dust",
+        "oritech:uranium_dust"
+      ],
+      "tag": "c:dusts/uranium"
+    },
+    {
+      "name": "uranium_block",
+      "material": "uranium",
+      "form": "storage_blocks",
+      "preferred": "mekanism:block_uranium",
+      "members": [
+        "mekanism:block_uranium",
+        "modern_industrialization:uranium_block"
+      ],
+      "tag": "c:storage_blocks/uranium"
+    },
+    {
+      "name": "bronze_ingot",
+      "material": "bronze",
+      "form": "ingots",
+      "preferred": "mekanism:ingot_bronze",
+      "members": [
+        "mekanism:ingot_bronze",
+        "modern_industrialization:bronze_ingot"
+      ],
+      "tag": "c:ingots/bronze"
+    },
+    {
+      "name": "bronze_nugget",
+      "material": "bronze",
+      "form": "nuggets",
+      "preferred": "mekanism:nugget_bronze",
+      "members": [
+        "mekanism:nugget_bronze",
+        "modern_industrialization:bronze_nugget"
+      ],
+      "tag": "c:nuggets/bronze"
+    },
+    {
+      "name": "bronze_dust",
+      "material": "bronze",
+      "form": "dusts",
+      "preferred": "mekanism:dust_bronze",
+      "members": [
+        "mekanism:dust_bronze",
+        "modern_industrialization:bronze_dust"
+      ],
+      "tag": "c:dusts/bronze"
+    },
+    {
+      "name": "bronze_block",
+      "material": "bronze",
+      "form": "storage_blocks",
+      "preferred": "mekanism:block_bronze",
+      "members": [
+        "mekanism:block_bronze",
+        "modern_industrialization:bronze_block"
+      ],
+      "tag": "c:storage_blocks/bronze"
+    },
+    {
+      "name": "steel_ingot",
+      "material": "steel",
+      "form": "ingots",
+      "preferred": "mekanism:ingot_steel",
+      "members": [
+        "cakesticklib:steel_ingot",
+        "mekanism:ingot_steel",
+        "modern_industrialization:steel_ingot",
+        "oritech:steel_ingot"
+      ],
+      "tag": "c:ingots/steel"
+    },
+    {
+      "name": "steel_nugget",
+      "material": "steel",
+      "form": "nuggets",
+      "preferred": "mekanism:nugget_steel",
+      "members": [
+        "cakesticklib:steel_nugget",
+        "mekanism:nugget_steel",
+        "modern_industrialization:steel_nugget"
+      ],
+      "tag": "c:nuggets/steel"
+    },
+    {
+      "name": "steel_dust",
+      "material": "steel",
+      "form": "dusts",
+      "preferred": "mekanism:dust_steel",
+      "members": [
+        "mekanism:dust_steel",
+        "modern_industrialization:steel_dust",
+        "oritech:steel_dust"
+      ],
+      "tag": "c:dusts/steel"
+    },
+    {
+      "name": "steel_block",
+      "material": "steel",
+      "form": "storage_blocks",
+      "preferred": "mekanism:block_steel",
+      "members": [
+        "cakesticklib:steel_block",
+        "mekanism:block_steel",
+        "modern_industrialization:steel_block",
+        "oritech:steel"
+      ],
+      "tag": "c:storage_blocks/steel"
+    },
+    {
+      "name": "electrum_ingot",
+      "material": "electrum",
+      "form": "ingots",
+      "preferred": "modern_industrialization:electrum_ingot",
+      "members": [
+        "modern_industrialization:electrum_ingot",
+        "oritech:electrum_ingot"
+      ],
+      "tag": "c:ingots/electrum"
+    },
+    {
+      "name": "electrum_nugget",
+      "material": "electrum",
+      "form": "nuggets",
+      "preferred": "modern_industrialization:electrum_nugget",
+      "members": [
+        "modern_industrialization:electrum_nugget"
+      ],
+      "tag": "c:nuggets/electrum"
+    },
+    {
+      "name": "electrum_dust",
+      "material": "electrum",
+      "form": "dusts",
+      "preferred": "modern_industrialization:electrum_dust",
+      "members": [
+        "modern_industrialization:electrum_dust",
+        "oritech:electrum_dust"
+      ],
+      "tag": "c:dusts/electrum"
+    },
+    {
+      "name": "electrum_block",
+      "material": "electrum",
+      "form": "storage_blocks",
+      "preferred": "modern_industrialization:electrum_block",
+      "members": [
+        "modern_industrialization:electrum_block",
+        "oritech:electrum"
+      ],
+      "tag": "c:storage_blocks/electrum"
+    },
+    {
+      "name": "osmium_ingot",
+      "material": "osmium",
+      "form": "ingots",
+      "preferred": "mekanism:ingot_osmium",
+      "members": [
+        "mekanism:ingot_osmium"
+      ],
+      "tag": "c:ingots/osmium"
+    },
+    {
+      "name": "osmium_nugget",
+      "material": "osmium",
+      "form": "nuggets",
+      "preferred": "mekanism:nugget_osmium",
+      "members": [
+        "mekanism:nugget_osmium"
+      ],
+      "tag": "c:nuggets/osmium"
+    },
+    {
+      "name": "osmium_dust",
+      "material": "osmium",
+      "form": "dusts",
+      "preferred": "mekanism:dust_osmium",
+      "members": [
+        "mekanism:dust_osmium"
+      ],
+      "tag": "c:dusts/osmium"
+    },
+    {
+      "name": "osmium_block",
+      "material": "osmium",
+      "form": "storage_blocks",
+      "preferred": "mekanism:block_osmium",
+      "members": [
+        "mekanism:block_osmium"
+      ],
+      "tag": "c:storage_blocks/osmium"
+    },
+    {
+      "name": "raw_tin",
+      "material": "tin",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/tin",
+      "members": [
+        "mekanism:raw_tin",
+        "modern_industrialization:raw_tin"
+      ],
+      "preferred": "mekanism:raw_tin",
+      "unit_material": "raw_tin"
+    },
+    {
+      "name": "raw_tin_block",
+      "material": "tin",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_tin",
+      "members": [
+        "mekanism:block_raw_tin",
+        "modern_industrialization:raw_tin_block"
+      ],
+      "preferred": "mekanism:block_raw_tin",
+      "unit_material": "raw_tin",
+      "display_en": "Raw Tin Block",
+      "display_zh": "粗锡块"
+    },
+    {
+      "name": "raw_lead",
+      "material": "lead",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/lead",
+      "members": [
+        "mekanism:raw_lead",
+        "modern_industrialization:raw_lead"
+      ],
+      "preferred": "mekanism:raw_lead",
+      "unit_material": "raw_lead"
+    },
+    {
+      "name": "raw_lead_block",
+      "material": "lead",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_lead",
+      "members": [
+        "mekanism:block_raw_lead",
+        "modern_industrialization:raw_lead_block"
+      ],
+      "preferred": "mekanism:block_raw_lead",
+      "unit_material": "raw_lead",
+      "display_en": "Raw Lead Block",
+      "display_zh": "粗铅块"
+    },
+    {
+      "name": "raw_silver",
+      "material": "silver",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/silver",
+      "members": [
+        "iceandfire:raw_silver",
+        "ltxi:raw_silver",
+        "mekmm:raw_silver",
+        "modern_industrialization:raw_silver"
+      ],
+      "preferred": "mekmm:raw_silver",
+      "unit_material": "raw_silver"
+    },
+    {
+      "name": "raw_silver_block",
+      "material": "silver",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_silver",
+      "members": [
+        "iceandfire:raw_silver_block",
+        "ltxi:raw_silver_block",
+        "mekmm:block_raw_silver",
+        "modern_industrialization:raw_silver_block"
+      ],
+      "preferred": "mekmm:block_raw_silver",
+      "unit_material": "raw_silver",
+      "display_en": "Raw Silver Block",
+      "display_zh": "粗银块"
+    },
+    {
+      "name": "raw_nickel",
+      "material": "nickel",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/nickel",
+      "members": [
+        "modern_industrialization:raw_nickel",
+        "oritech:raw_nickel"
+      ],
+      "preferred": "modern_industrialization:raw_nickel",
+      "unit_material": "raw_nickel"
+    },
+    {
+      "name": "raw_nickel_block",
+      "material": "nickel",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_nickel",
+      "members": [
+        "modern_industrialization:raw_nickel_block",
+        "oritech:raw_nickel_block"
+      ],
+      "preferred": "modern_industrialization:raw_nickel_block",
+      "unit_material": "raw_nickel",
+      "display_en": "Raw Nickel Block",
+      "display_zh": "粗镍块"
+    },
+    {
+      "name": "raw_aluminum",
+      "material": "aluminum",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/aluminum",
+      "members": [
+        "neoecoae:raw_aluminum_ore"
+      ],
+      "preferred": "neoecoae:raw_aluminum_ore",
+      "unit_material": "raw_aluminum"
+    },
+    {
+      "name": "raw_aluminum_block",
+      "material": "aluminum",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_aluminum",
+      "members": [
+        "neoecoae:raw_aluminum_block"
+      ],
+      "preferred": "neoecoae:raw_aluminum_block",
+      "unit_material": "raw_aluminum",
+      "display_en": "Raw Aluminum Block",
+      "display_zh": "粗铝块"
+    },
+    {
+      "name": "raw_platinum",
+      "material": "platinum",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/platinum",
+      "members": [
+        "modern_industrialization:raw_platinum",
+        "oritech:raw_platinum"
+      ],
+      "preferred": "modern_industrialization:raw_platinum",
+      "unit_material": "raw_platinum"
+    },
+    {
+      "name": "raw_platinum_block",
+      "material": "platinum",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_platinum",
+      "members": [
+        "modern_industrialization:raw_platinum_block",
+        "oritech:raw_platinum_block"
+      ],
+      "preferred": "modern_industrialization:raw_platinum_block",
+      "unit_material": "raw_platinum",
+      "display_en": "Raw Platinum Block",
+      "display_zh": "粗铂块"
+    },
+    {
+      "name": "raw_titanium",
+      "material": "titanium",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/titanium",
+      "members": [
+        "ltxi:raw_titanium",
+        "modern_industrialization:raw_titanium"
+      ],
+      "preferred": "modern_industrialization:raw_titanium",
+      "unit_material": "raw_titanium"
+    },
+    {
+      "name": "raw_titanium_block",
+      "material": "titanium",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_titanium",
+      "members": [
+        "ltxi:raw_titanium_block",
+        "modern_industrialization:raw_titanium_block"
+      ],
+      "preferred": "modern_industrialization:raw_titanium_block",
+      "unit_material": "raw_titanium",
+      "display_en": "Raw Titanium Block",
+      "display_zh": "粗钛块"
+    },
+    {
+      "name": "raw_tungsten",
+      "material": "tungsten",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/tungsten",
+      "members": [
+        "modern_industrialization:raw_tungsten",
+        "neoecoae:raw_tungsten_ore"
+      ],
+      "preferred": "modern_industrialization:raw_tungsten",
+      "unit_material": "raw_tungsten"
+    },
+    {
+      "name": "raw_tungsten_block",
+      "material": "tungsten",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_tungsten",
+      "members": [
+        "modern_industrialization:raw_tungsten_block",
+        "neoecoae:raw_tungsten_block"
+      ],
+      "preferred": "modern_industrialization:raw_tungsten_block",
+      "unit_material": "raw_tungsten",
+      "display_en": "Raw Tungsten Block",
+      "display_zh": "粗钨块"
+    },
+    {
+      "name": "raw_uranium",
+      "material": "uranium",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/uranium",
+      "members": [
+        "mekanism:raw_uranium",
+        "modern_industrialization:raw_uranium",
+        "oritech:raw_uranium"
+      ],
+      "preferred": "mekanism:raw_uranium",
+      "unit_material": "raw_uranium"
+    },
+    {
+      "name": "raw_uranium_block",
+      "material": "uranium",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_uranium",
+      "members": [
+        "mekanism:block_raw_uranium",
+        "modern_industrialization:raw_uranium_block",
+        "oritech:raw_uranium_block"
+      ],
+      "preferred": "mekanism:block_raw_uranium",
+      "unit_material": "raw_uranium",
+      "display_en": "Raw Uranium Block",
+      "display_zh": "粗铀块"
+    },
+    {
+      "name": "raw_osmium",
+      "material": "osmium",
+      "form": "raw_materials",
+      "tag": "c:raw_materials/osmium",
+      "members": [
+        "mekanism:raw_osmium"
+      ],
+      "preferred": "mekanism:raw_osmium",
+      "unit_material": "raw_osmium"
+    },
+    {
+      "name": "raw_osmium_block",
+      "material": "osmium",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/raw_osmium",
+      "members": [
+        "mekanism:block_raw_osmium"
+      ],
+      "preferred": "mekanism:block_raw_osmium",
+      "unit_material": "raw_osmium",
+      "display_en": "Raw Osmium Block",
+      "display_zh": "粗锇块"
+    },
+    {
+      "name": "silicon",
+      "material": "silicon",
+      "form": "gems",
+      "tag": "c:silicon",
+      "members": [
+        "ae2:silicon",
+        "cakesticklib:silicon_gem",
+        "enderio:silicon",
+        "oritech:silicon"
+      ],
+      "preferred": "oritech:silicon",
+      "unit_material": "ordinary_silicon",
+      "display_en": "Silicon",
+      "display_zh": "硅"
+    },
+    {
+      "name": "silicon_block",
+      "material": "silicon",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/silicon",
+      "members": [
+        "ae2cs:silicon_block",
+        "ae2lt:silicon_block",
+        "extendedae:silicon_block",
+        "oritech:silicon_block"
+      ],
+      "preferred": "oritech:silicon_block",
+      "unit_material": "ordinary_silicon",
+      "group": "storage_blocks/ordinary_silicon",
+      "display_en": "Silicon Block",
+      "display_zh": "硅块"
+    },
+    {
+      "name": "silicon_ingot",
+      "material": "silicon",
+      "form": "ingots",
+      "tag": "c:ingots/silicon",
+      "members": [
+        "ltxi:silicon_ingot",
+        "modern_industrialization:silicon_ingot"
+      ],
+      "preferred": "modern_industrialization:silicon_ingot"
+    },
+    {
+      "name": "silicon_nugget",
+      "material": "silicon",
+      "form": "nuggets",
+      "tag": "c:nuggets/silicon",
+      "members": [
+        "modern_industrialization:silicon_nugget"
+      ],
+      "preferred": "modern_industrialization:silicon_nugget"
+    },
+    {
+      "name": "silicon_dust",
+      "material": "silicon",
+      "form": "dusts",
+      "tag": "c:dusts/silicon",
+      "members": [
+        "ltxi:silicon_dust",
+        "modern_industrialization:silicon_dust"
+      ],
+      "preferred": "modern_industrialization:silicon_dust"
+    },
+    {
+      "name": "silicon_metal_block",
+      "material": "silicon",
+      "form": "storage_blocks",
+      "tag": "c:storage_blocks/silicon",
+      "members": [
+        "modern_industrialization:silicon_block"
+      ],
+      "preferred": "modern_industrialization:silicon_block",
+      "group": "storage_blocks/silicon_metal",
+      "display_en": "Silicon Ingot Block",
+      "display_zh": "硅锭块"
+    },
+    {
+      "name": "copper_nugget",
+      "material": "copper",
+      "form": "nuggets",
+      "tag": "c:nuggets/copper",
+      "members": [
+        "modern_industrialization:copper_nugget",
+        "twilightforest:copper_nugget"
+      ],
+      "preferred": "modern_industrialization:copper_nugget",
+      "canonical": "minecraft:copper_nugget"
+    },
+    {
+      "name": "deepslate_tin_ore",
+      "material": "tin",
+      "form": "ores",
+      "preferred": "mekanism:deepslate_tin_ore",
+      "members": [
+        "mekanism:deepslate_tin_ore",
+        "modern_industrialization:deepslate_tin_ore"
+      ],
+      "tag": "c:ores/tin",
+      "group": "ores/tin/deepslate",
+      "display_en": "Deepslate Tin Ore",
+      "display_zh": "深层锡矿石"
+    },
+    {
+      "name": "tin_ore",
+      "material": "tin",
+      "form": "ores",
+      "preferred": "mekanism:tin_ore",
+      "members": [
+        "mekanism:tin_ore",
+        "modern_industrialization:tin_ore"
+      ],
+      "tag": "c:ores/tin",
+      "group": "ores/tin/stone",
+      "display_en": "Tin Ore",
+      "display_zh": "锡矿石"
+    },
+    {
+      "name": "deepslate_lead_ore",
+      "material": "lead",
+      "form": "ores",
+      "preferred": "mekanism:deepslate_lead_ore",
+      "members": [
+        "mekanism:deepslate_lead_ore",
+        "modern_industrialization:deepslate_lead_ore"
+      ],
+      "tag": "c:ores/lead",
+      "group": "ores/lead/deepslate",
+      "display_en": "Deepslate Lead Ore",
+      "display_zh": "深层铅矿石"
+    },
+    {
+      "name": "lead_ore",
+      "material": "lead",
+      "form": "ores",
+      "preferred": "mekanism:lead_ore",
+      "members": [
+        "mekanism:lead_ore",
+        "modern_industrialization:lead_ore"
+      ],
+      "tag": "c:ores/lead",
+      "group": "ores/lead/stone",
+      "display_en": "Lead Ore",
+      "display_zh": "铅矿石"
+    },
+    {
+      "name": "deepslate_silver_ore",
+      "material": "silver",
+      "form": "ores",
+      "preferred": "mekmm:deepslate_silver_ore",
+      "members": [
+        "iceandfire:deepslate_silver_ore",
+        "ltxi:deepslate_silver_ore",
+        "mekmm:deepslate_silver_ore"
+      ],
+      "tag": "c:ores/silver",
+      "group": "ores/silver/deepslate",
+      "display_en": "Deepslate Silver Ore",
+      "display_zh": "深层银矿石"
+    },
+    {
+      "name": "silver_ore",
+      "material": "silver",
+      "form": "ores",
+      "preferred": "mekmm:silver_ore",
+      "members": [
+        "iceandfire:silver_ore",
+        "ltxi:silver_ore",
+        "mekmm:silver_ore"
+      ],
+      "tag": "c:ores/silver",
+      "group": "ores/silver/stone",
+      "display_en": "Silver Ore",
+      "display_zh": "银矿石"
+    },
+    {
+      "name": "deepslate_nickel_ore",
+      "material": "nickel",
+      "form": "ores",
+      "preferred": "modern_industrialization:deepslate_nickel_ore",
+      "members": [
+        "modern_industrialization:deepslate_nickel_ore",
+        "oritech:deepslate_nickel_ore"
+      ],
+      "tag": "c:ores/nickel",
+      "group": "ores/nickel/deepslate",
+      "display_en": "Deepslate Nickel Ore",
+      "display_zh": "深层镍矿石"
+    },
+    {
+      "name": "nickel_ore",
+      "material": "nickel",
+      "form": "ores",
+      "preferred": "modern_industrialization:nickel_ore",
+      "members": [
+        "modern_industrialization:nickel_ore",
+        "oritech:nickel_ore"
+      ],
+      "tag": "c:ores/nickel",
+      "group": "ores/nickel/stone",
+      "display_en": "Nickel Ore",
+      "display_zh": "镍矿石"
+    },
+    {
+      "name": "aluminum_ore",
+      "material": "aluminum",
+      "form": "ores",
+      "preferred": "neoecoae:aluminum_ore",
+      "members": [
+        "neoecoae:aluminum_ore"
+      ],
+      "tag": "c:ores/aluminum",
+      "group": "ores/aluminum/stone",
+      "display_en": "Aluminum Ore",
+      "display_zh": "铝矿石"
+    },
+    {
+      "name": "platinum_ore",
+      "material": "platinum",
+      "form": "ores",
+      "preferred": "modern_industrialization:platinum_ore",
+      "members": [
+        "modern_industrialization:platinum_ore"
+      ],
+      "tag": "c:ores/platinum",
+      "group": "ores/platinum/stone",
+      "display_en": "Platinum Ore",
+      "display_zh": "铂矿石"
+    },
+    {
+      "name": "deepslate_platinum_ore",
+      "material": "platinum",
+      "form": "ores",
+      "preferred": "oritech:deepslate_platinum_ore",
+      "members": [
+        "oritech:deepslate_platinum_ore"
+      ],
+      "tag": "c:ores/platinum",
+      "group": "ores/platinum/deepslate",
+      "display_en": "Deepslate Platinum Ore",
+      "display_zh": "深层铂矿石"
+    },
+    {
+      "name": "endstone_platinum_ore",
+      "material": "platinum",
+      "form": "ores",
+      "preferred": "oritech:endstone_platinum_ore",
+      "members": [
+        "oritech:endstone_platinum_ore"
+      ],
+      "tag": "c:ores/platinum",
+      "group": "ores/platinum/end_stone",
+      "display_en": "End Stone Platinum Ore",
+      "display_zh": "末地石铂矿石"
+    },
+    {
+      "name": "deepslate_titanium_ore",
+      "material": "titanium",
+      "form": "ores",
+      "preferred": "ltxi:deepslate_titanium_ore",
+      "members": [
+        "ltxi:deepslate_titanium_ore"
+      ],
+      "tag": "c:ores/titanium",
+      "group": "ores/titanium/deepslate",
+      "display_en": "Deepslate Titanium Ore",
+      "display_zh": "深层钛矿石"
+    },
+    {
+      "name": "titanium_ore",
+      "material": "titanium",
+      "form": "ores",
+      "preferred": "modern_industrialization:titanium_ore",
+      "members": [
+        "ltxi:titanium_ore",
+        "modern_industrialization:titanium_ore"
+      ],
+      "tag": "c:ores/titanium",
+      "group": "ores/titanium/stone",
+      "display_en": "Titanium Ore",
+      "display_zh": "钛矿石"
+    },
+    {
+      "name": "deepslate_tungsten_ore",
+      "material": "tungsten",
+      "form": "ores",
+      "preferred": "modern_industrialization:deepslate_tungsten_ore",
+      "members": [
+        "modern_industrialization:deepslate_tungsten_ore"
+      ],
+      "tag": "c:ores/tungsten",
+      "group": "ores/tungsten/deepslate",
+      "display_en": "Deepslate Tungsten Ore",
+      "display_zh": "深层钨矿石"
+    },
+    {
+      "name": "tungsten_ore",
+      "material": "tungsten",
+      "form": "ores",
+      "preferred": "modern_industrialization:tungsten_ore",
+      "members": [
+        "modern_industrialization:tungsten_ore",
+        "neoecoae:tungsten_ore"
+      ],
+      "tag": "c:ores/tungsten",
+      "group": "ores/tungsten/stone",
+      "display_en": "Tungsten Ore",
+      "display_zh": "钨矿石"
+    },
+    {
+      "name": "deepslate_uranium_ore",
+      "material": "uranium",
+      "form": "ores",
+      "preferred": "mekanism:deepslate_uranium_ore",
+      "members": [
+        "mekanism:deepslate_uranium_ore",
+        "modern_industrialization:deepslate_uranium_ore",
+        "oritech:deepslate_uranium_ore"
+      ],
+      "tag": "c:ores/uranium",
+      "group": "ores/uranium/deepslate",
+      "display_en": "Deepslate Uranium Ore",
+      "display_zh": "深层铀矿石"
+    },
+    {
+      "name": "uranium_ore",
+      "material": "uranium",
+      "form": "ores",
+      "preferred": "mekanism:uranium_ore",
+      "members": [
+        "mekanism:uranium_ore",
+        "modern_industrialization:uranium_ore"
+      ],
+      "tag": "c:ores/uranium",
+      "group": "ores/uranium/stone",
+      "display_en": "Uranium Ore",
+      "display_zh": "铀矿石"
+    },
+    {
+      "name": "deepslate_osmium_ore",
+      "material": "osmium",
+      "form": "ores",
+      "preferred": "mekanism:deepslate_osmium_ore",
+      "members": [
+        "mekanism:deepslate_osmium_ore"
+      ],
+      "tag": "c:ores/osmium",
+      "group": "ores/osmium/deepslate",
+      "display_en": "Deepslate Osmium Ore",
+      "display_zh": "深层锇矿石"
+    },
+    {
+      "name": "osmium_ore",
+      "material": "osmium",
+      "form": "ores",
+      "preferred": "mekanism:osmium_ore",
+      "members": [
+        "mekanism:osmium_ore"
+      ],
+      "tag": "c:ores/osmium",
+      "group": "ores/osmium/stone",
+      "display_en": "Osmium Ore",
+      "display_zh": "锇矿石"
+    }
+  ]
+}

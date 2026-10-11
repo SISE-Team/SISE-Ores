@@ -1,0 +1,18 @@
+# Generated resources, binaries and local validation data
+/build/
+/verification/
+/backup/
+__pycache__/
+*.py[cod]
+*.jar
+*.zip
+*.log
+
+# Local environment / editor files
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
