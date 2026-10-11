@@ -64,25 +64,27 @@ RarityCore 2601.14.2 的 `RaritySyncPayload` 直接持有可并发修改的稀�
 
 ## 维护与构建
 
-主分支：`26.1.2`。从独立克隆构建时，请先阅读 [构建说明](docs/BUILDING.md)，通过 `SISE_INSTANCE_DIR` 与 `SISE_JDK_DIR` 指定本地实例及 JDK。
+主分支：`26.1.2`。Python 构建、验证和维护脚本统一保存在本地 `tool/`，该目录及所有 `*.py` 文件均由 Git 忽略，不随仓库提交。独立克隆只包含源码、规则和文档；构建需另行准备本地工具，详见 [构建说明](docs/BUILDING.md)。
 
 - `materials.json`：审核后的材料清单，唯一规则来源；新模组的物品不会因为同标签而被自动纳入。
 - `src/main/java/.../RecipeTransform.java`：按配方格式识别物品输入/输出；不遍历流体、化学品或数据组件。
-- `build.py`：生成标签、翻译、物品模型引用、方块掉落、转换配方，然后用工作区 JDK 25 编译。只清理本工程 `build/classes` 和 `build/resources`。
-- `test.py`：遍历已安装模组中的实际配方，检查身份替换之外的所有数据保持不变、重复执行幂等、特殊材料排除和无遗漏。
-- `verify.py prepare` / `verify.py launch`：在 `.work/test-sise-ores-worldgen-20261011` 中启动完整模组环境，使用离线身份和新建普通地形测试世界；验证注册、标签、221 条转换、压缩拆解、跨模组配方、方块掉落、JEI 来源、显示和重新加载，并回归当前 SISE Compat 修复。
+- 本地 `tool/build.py`：生成标签、翻译、物品模型引用、方块掉落、转换配方，然后用工作区 JDK 25 编译。只清理本工程 `build/classes` 和 `build/resources`。
+- 本地 `tool/test.py`：遍历已安装模组中的实际配方，检查身份替换之外的所有数据保持不变、重复执行幂等、特殊材料排除和无遗漏。
+- 本地 `tool/verify.py prepare` / `tool/verify.py launch`：在 `.work/test-sise-ores-worldgen-20261011` 中启动完整模组环境，使用离线身份和新建普通地形测试世界；验证注册、标签、221 条转换、压缩拆解、跨模组配方、方块掉落、JEI 来源、显示和重新加载，并回归当前 SISE Compat 修复。
 - `WorldgenChecks.java`：扫描实际生成的主世界与末地区块，核对已加载世界生成配置，逐项调用 35 种原矿石的真实 OreFeature 与 WorldGenRegion 放置，检查 20 种新矿石的普通挖掘、精准采集、时运、工具等级及特殊矿物边界。证据保存为 `verification/worldgen-report.json`。
-- `audit.py`：审计完整运行导出，比较统一前后配方输入域、机器同输入产出、材料守恒和原有加载失败；生成 JSON 明细及中文报告。
+- 本地 `tool/audit.py`：审计完整运行导出，比较统一前后配方输入域、机器同输入产出、材料守恒和原有加载失败；生成 JSON 明细及中文报告。
 - `MineralRepairs.java`：7 条按配方 ID 限定的矿物格式修复；不批量改写无关旧格式配方。
 - `MaterialLootModifier.java`：战利品计算后归并审核材料，保留时运数量，显式组件物品保持原样。
 - 正常运行时审计：游戏实例的 `logs/sise-ores-unification.json`。
 
+已准备好本地 `tool/` 的维护环境中，从实例根目录运行：
+
 ```powershell
-python .work\SISE-Ores\build.py
-python .work\SISE-Ores\test.py
-python .work\SISE-Ores\verify.py prepare
-python .work\SISE-Ores\verify.py launch
-python .work\SISE-Ores\audit.py
+python .work\SISE-Ores\tool\build.py
+python .work\SISE-Ores\tool\test.py
+python .work\SISE-Ores\tool\verify.py prepare
+python .work\SISE-Ores\tool\verify.py launch
+python .work\SISE-Ores\tool\audit.py
 ```
 
 这是针对当前 project02 的明确材料白名单。升级模组后应检查审计报告并重新运行验证，不应以字符串替换方式直接扩展到所有材料。

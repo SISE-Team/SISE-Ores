@@ -1,3 +1,7 @@
+# Local tooling stays on the maintainer's machine
+/tool/
+*.py
+
 # Generated resources, binaries and local validation data
 /build/
 /verification/
