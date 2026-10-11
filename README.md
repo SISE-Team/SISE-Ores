@@ -1,4 +1,4 @@
-# SISE Ores 0.3.0 — project02 / NeoForge 26.1.2
+# SISE Ores 0.3.0 — NeoForge 26.1.2
 
 真正注册在 `sise_ores` 命名空间下的统一材料模组；模组来源名称为 **SISE Ores**。
 
@@ -87,4 +87,4 @@ python .work\SISE-Ores\tool\verify.py launch
 python .work\SISE-Ores\tool\audit.py
 ```
 
-这是针对当前 project02 的明确材料白名单。升级模组后应检查审计报告并重新运行验证，不应以字符串替换方式直接扩展到所有材料。
+这是针对当前整合包的明确材料白名单。升级模组后应检查审计报告并重新运行验证，不应以字符串替换方式直接扩展到所有材料。

@@ -2,7 +2,7 @@
 
 本仓库的主分支为 `26.1.2`，当前模组版本为 `0.3.0+26.1.2`。
 
-这是 project02 整合包的材料兼容模组，针对实际安装的 NeoForge 26.1.2.114 与配套模组开发。它不是能任意移除依赖的通用材料库。运行时代码在 `src/main/java`，规则在 `materials.json`；资源文件和模组元数据由本地 `tool/build.py` 生成。
+这是面向目标整合包的材料兼容模组，针对实际安装的 NeoForge 26.1.2.114 与配套模组开发。它不是能任意移除依赖的通用材料库。运行时代码在 `src/main/java`，规则在 `materials.json`；资源文件和模组元数据由本地 `tool/build.py` 生成。
 
 Python 脚本统一存放在维护者本地的 `tool/` 目录；`/tool/` 和 `*.py` 均已加入 `.gitignore`，不随源码提交。以下命令仅适用于已另行准备好这些脚本的维护环境。仅克隆此仓库无法直接执行构建或验证命令。
 
@@ -10,13 +10,13 @@ Python 脚本统一存放在维护者本地的 `tool/` 目录；`/tool/` 和 `*.
 
 - Windows、Python 3.10 或更新版本、JDK 25。
 - 仓库根目录下已准备好本地 `tool/` 脚本。
-- 已安装相应模组的 project02 实例，其中包含 `mods/` 和已解析的 `libraries/`。
+- 已安装相应模组的目标实例，其中包含 `mods/` 和已解析的 `libraries/`。
 - 类路径需要该实例的 NeoForge、MEK、MEK More Machine、MI、Oritech、LTXI、NeoEcoAE、JEI 等依赖。构建脚本使用实例现有 JAR，不下载或重新分发第三方代码及纹理。
 
 从仓库根目录执行：
 
 ```powershell
-$env:SISE_INSTANCE_DIR = 'D:\Minecraft\project02'
+$env:SISE_INSTANCE_DIR = 'D:\Minecraft\SISE'
 $env:SISE_JDK_DIR = 'C:\Java\jdk-25'
 python tool/build.py
 python tool/test.py
@@ -30,7 +30,7 @@ python tool/test.py
 
 ## 完整客户端验证
 
-本地 `tool/verify.py`、`tool/audit.py`、`tool/worldgen_report.py` 配合仓库中的 `src/probe` 完成原 project02 实例的集成验证，完整运行需要：
+本地 `tool/verify.py`、`tool/audit.py`、`tool/worldgen_report.py` 配合仓库中的 `src/probe` 完成目标实例的集成验证，完整运行需要：
 
 - 实例的 `config/`、`defaultconfigs/`、`kubejs/` 和 `options.txt`；
 - 已安装 SISE Compat 0.1.1（集成探针同时检查其配方修复）；
