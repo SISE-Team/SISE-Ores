@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 8,
   "priority": [
     "mekanism",
     "mekmm",
@@ -9,10 +9,24 @@
     "ltxi",
     "neoecoae",
     "iceandfire",
-    "cakesticklib"
+    "cakesticklib",
+    "ic2"
   ],
   "excluded": [
-    "oritech:biosteel_ingot"
+    "ae2:printed_silicon",
+    "ic2:iridium_ore",
+    "ic2:iridium_shard",
+    "ic2:plutonium",
+    "ic2:refined_iron_ingot",
+    "ic2:rubber_sheet",
+    "ic2:uranium",
+    "ic2:uranium_235",
+    "ic2:uranium_238",
+    "mekanism:block_salt",
+    "modern_industrialization:carbon_plate",
+    "modern_industrialization:rubber_sheet",
+    "oritech:biosteel_ingot",
+    "oritech:uranium"
   ],
   "materials": [
     {
@@ -23,6 +37,7 @@
       "members": [
         "cakesticklib:iron_dust",
         "enderio:powdered_iron",
+        "ic2:iron_dust",
         "mekanism:dust_iron",
         "modern_industrialization:iron_dust",
         "neoecoae:iron_dust",
@@ -38,6 +53,7 @@
       "members": [
         "cakesticklib:gold_dust",
         "enderio:powdered_gold",
+        "ic2:gold_dust",
         "mekanism:dust_gold",
         "modern_industrialization:gold_dust",
         "oritech:gold_dust"
@@ -52,6 +68,7 @@
       "members": [
         "cakesticklib:copper_dust",
         "enderio:powdered_copper",
+        "ic2:copper_dust",
         "mekanism:dust_copper",
         "modern_industrialization:copper_dust",
         "oritech:copper_dust"
@@ -64,6 +81,7 @@
       "form": "ingots",
       "preferred": "mekanism:ingot_tin",
       "members": [
+        "ic2:tin_ingot",
         "mekanism:ingot_tin",
         "modern_industrialization:tin_ingot"
       ],
@@ -87,6 +105,7 @@
       "preferred": "mekanism:dust_tin",
       "members": [
         "enderio:powdered_tin",
+        "ic2:tin_dust",
         "mekanism:dust_tin",
         "modern_industrialization:tin_dust"
       ],
@@ -98,6 +117,7 @@
       "form": "storage_blocks",
       "preferred": "mekanism:block_tin",
       "members": [
+        "ic2:tin_block",
         "mekanism:block_tin",
         "modern_industrialization:tin_block"
       ],
@@ -109,6 +129,7 @@
       "form": "ingots",
       "preferred": "mekanism:ingot_lead",
       "members": [
+        "ic2:lead_ingot",
         "mekanism:ingot_lead",
         "modern_industrialization:lead_ingot"
       ],
@@ -131,6 +152,7 @@
       "form": "dusts",
       "preferred": "mekanism:dust_lead",
       "members": [
+        "ic2:lead_dust",
         "mekanism:dust_lead",
         "modern_industrialization:lead_dust"
       ],
@@ -142,6 +164,7 @@
       "form": "storage_blocks",
       "preferred": "mekanism:block_lead",
       "members": [
+        "ic2:lead_block",
         "mekanism:block_lead",
         "modern_industrialization:lead_block"
       ],
@@ -153,6 +176,7 @@
       "form": "ingots",
       "preferred": "mekmm:ingot_silver",
       "members": [
+        "ic2:silver_ingot",
         "iceandfire:silver_ingot",
         "ltxi:silver_ingot",
         "mekmm:ingot_silver",
@@ -179,6 +203,7 @@
       "form": "dusts",
       "preferred": "mekmm:dust_silver",
       "members": [
+        "ic2:silver_dust",
         "ltxi:silver_dust",
         "mekmm:dust_silver",
         "modern_industrialization:silver_dust"
@@ -191,6 +216,7 @@
       "form": "storage_blocks",
       "preferred": "mekmm:block_silver",
       "members": [
+        "ic2:silver_block",
         "iceandfire:silver_block",
         "ltxi:silver_block",
         "mekmm:block_silver",
@@ -422,6 +448,7 @@
       "form": "ingots",
       "preferred": "mekanism:ingot_uranium",
       "members": [
+        "ic2:uranium_ingot",
         "mekanism:ingot_uranium",
         "modern_industrialization:uranium_ingot"
       ],
@@ -456,6 +483,7 @@
       "form": "storage_blocks",
       "preferred": "mekanism:block_uranium",
       "members": [
+        "ic2:uranium_block",
         "mekanism:block_uranium",
         "modern_industrialization:uranium_block"
       ],
@@ -467,6 +495,7 @@
       "form": "ingots",
       "preferred": "mekanism:ingot_bronze",
       "members": [
+        "ic2:bronze_ingot",
         "mekanism:ingot_bronze",
         "modern_industrialization:bronze_ingot"
       ],
@@ -489,6 +518,7 @@
       "form": "dusts",
       "preferred": "mekanism:dust_bronze",
       "members": [
+        "ic2:bronze_dust",
         "mekanism:dust_bronze",
         "modern_industrialization:bronze_dust"
       ],
@@ -500,6 +530,7 @@
       "form": "storage_blocks",
       "preferred": "mekanism:block_bronze",
       "members": [
+        "ic2:bronze_block",
         "mekanism:block_bronze",
         "modern_industrialization:bronze_block"
       ],
@@ -512,6 +543,7 @@
       "preferred": "mekanism:ingot_steel",
       "members": [
         "cakesticklib:steel_ingot",
+        "ic2:steel_ingot",
         "mekanism:ingot_steel",
         "modern_industrialization:steel_ingot",
         "oritech:steel_ingot"
@@ -549,6 +581,7 @@
       "preferred": "mekanism:block_steel",
       "members": [
         "cakesticklib:steel_block",
+        "ic2:steel_block",
         "mekanism:block_steel",
         "modern_industrialization:steel_block",
         "oritech:steel"
@@ -644,6 +677,7 @@
       "form": "raw_materials",
       "tag": "c:raw_materials/tin",
       "members": [
+        "ic2:raw_tin",
         "mekanism:raw_tin",
         "modern_industrialization:raw_tin"
       ],
@@ -656,6 +690,7 @@
       "form": "storage_blocks",
       "tag": "c:storage_blocks/raw_tin",
       "members": [
+        "ic2:raw_tin_block",
         "mekanism:block_raw_tin",
         "modern_industrialization:raw_tin_block"
       ],
@@ -670,6 +705,7 @@
       "form": "raw_materials",
       "tag": "c:raw_materials/lead",
       "members": [
+        "ic2:raw_lead",
         "mekanism:raw_lead",
         "modern_industrialization:raw_lead"
       ],
@@ -682,6 +718,7 @@
       "form": "storage_blocks",
       "tag": "c:storage_blocks/raw_lead",
       "members": [
+        "ic2:raw_lead_block",
         "mekanism:block_raw_lead",
         "modern_industrialization:raw_lead_block"
       ],
@@ -854,6 +891,7 @@
       "form": "raw_materials",
       "tag": "c:raw_materials/uranium",
       "members": [
+        "ic2:raw_uranium",
         "mekanism:raw_uranium",
         "modern_industrialization:raw_uranium",
         "oritech:raw_uranium"
@@ -867,6 +905,7 @@
       "form": "storage_blocks",
       "tag": "c:storage_blocks/raw_uranium",
       "members": [
+        "ic2:raw_uranium_block",
         "mekanism:block_raw_uranium",
         "modern_industrialization:raw_uranium_block",
         "oritech:raw_uranium_block"
@@ -996,6 +1035,7 @@
       "form": "ores",
       "preferred": "mekanism:deepslate_tin_ore",
       "members": [
+        "ic2:deepslate_tin_ore",
         "mekanism:deepslate_tin_ore",
         "modern_industrialization:deepslate_tin_ore"
       ],
@@ -1010,6 +1050,7 @@
       "form": "ores",
       "preferred": "mekanism:tin_ore",
       "members": [
+        "ic2:tin_ore",
         "mekanism:tin_ore",
         "modern_industrialization:tin_ore"
       ],
@@ -1024,6 +1065,7 @@
       "form": "ores",
       "preferred": "mekanism:deepslate_lead_ore",
       "members": [
+        "ic2:deepslate_lead_ore",
         "mekanism:deepslate_lead_ore",
         "modern_industrialization:deepslate_lead_ore"
       ],
@@ -1038,6 +1080,7 @@
       "form": "ores",
       "preferred": "mekanism:lead_ore",
       "members": [
+        "ic2:lead_ore",
         "mekanism:lead_ore",
         "modern_industrialization:lead_ore"
       ],
@@ -1216,6 +1259,7 @@
       "form": "ores",
       "preferred": "mekanism:deepslate_uranium_ore",
       "members": [
+        "ic2:deepslate_uranium_ore",
         "mekanism:deepslate_uranium_ore",
         "modern_industrialization:deepslate_uranium_ore",
         "oritech:deepslate_uranium_ore"
@@ -1231,6 +1275,7 @@
       "form": "ores",
       "preferred": "mekanism:uranium_ore",
       "members": [
+        "ic2:uranium_ore",
         "mekanism:uranium_ore",
         "modern_industrialization:uranium_ore"
       ],
@@ -1264,6 +1309,1130 @@
       "group": "ores/osmium/stone",
       "display_en": "Osmium Ore",
       "display_zh": "锇矿石"
+    },
+    {
+      "name": "copper_ingot",
+      "material": "copper",
+      "form": "ingots",
+      "preferred": "ic2:copper_ingot",
+      "members": [
+        "ic2:copper_ingot"
+      ],
+      "tag": "c:ingots/copper",
+      "canonical": "minecraft:copper_ingot"
+    },
+    {
+      "name": "carbon_dust",
+      "material": "carbon",
+      "form": "dusts",
+      "preferred": "modern_industrialization:carbon_dust",
+      "members": [
+        "cakesticklib:carbon_dust",
+        "ltxi:carbon_dust",
+        "modern_industrialization:carbon_dust"
+      ],
+      "tag": "c:dusts/carbon"
+    },
+    {
+      "name": "coal_dust",
+      "material": "coal",
+      "form": "dusts",
+      "preferred": "mekanism:dust_coal",
+      "members": [
+        "enderio:powdered_coal",
+        "ic2:coal_dust",
+        "mekanism:dust_coal",
+        "modern_industrialization:coal_dust",
+        "oritech:coal_dust"
+      ],
+      "tag": "c:dusts/coal"
+    },
+    {
+      "name": "diamond_dust",
+      "material": "diamond",
+      "form": "dusts",
+      "preferred": "mekanism:dust_diamond",
+      "members": [
+        "appflux:diamond_dust",
+        "cakesticklib:diamond_dust",
+        "ic2:diamond_dust",
+        "mekanism:dust_diamond",
+        "modern_industrialization:diamond_dust"
+      ],
+      "tag": "c:dusts/diamond"
+    },
+    {
+      "name": "emerald_dust",
+      "material": "emerald",
+      "form": "dusts",
+      "preferred": "mekanism:dust_emerald",
+      "members": [
+        "appflux:emerald_dust",
+        "cakesticklib:emerald_dust",
+        "mekanism:dust_emerald",
+        "modern_industrialization:emerald_dust"
+      ],
+      "tag": "c:dusts/emerald"
+    },
+    {
+      "name": "ender_pearl_dust",
+      "material": "ender_pearl",
+      "form": "dusts",
+      "preferred": "enderio:powdered_ender_pearl",
+      "members": [
+        "ae2:ender_dust",
+        "enderio:powdered_ender_pearl"
+      ],
+      "tag": "c:dusts/ender_pearl"
+    },
+    {
+      "name": "lapis_dust",
+      "material": "lapis",
+      "form": "dusts",
+      "preferred": "mekanism:dust_lapis_lazuli",
+      "members": [
+        "cakesticklib:lapis_dust",
+        "enderio:powdered_lapis_lazuli",
+        "ic2:lapis_dust",
+        "mekanism:dust_lapis_lazuli",
+        "modern_industrialization:lapis_dust"
+      ],
+      "tag": "c:dusts/lapis"
+    },
+    {
+      "name": "obsidian_dust",
+      "material": "obsidian",
+      "form": "dusts",
+      "preferred": "mekanism:dust_obsidian",
+      "members": [
+        "enderio:powdered_obsidian",
+        "ic2:obsidian_dust",
+        "mekanism:dust_obsidian"
+      ],
+      "tag": "c:dusts/obsidian"
+    },
+    {
+      "name": "plutonium_dust",
+      "material": "plutonium",
+      "form": "dusts",
+      "preferred": "modern_industrialization:plutonium_dust",
+      "members": [
+        "modern_industrialization:plutonium_dust",
+        "oritech:plutonium_dust"
+      ],
+      "tag": "c:dusts/plutonium"
+    },
+    {
+      "name": "quartz_dust",
+      "material": "quartz",
+      "form": "dusts",
+      "preferred": "mekanism:dust_quartz",
+      "members": [
+        "ae2cs:nether_quartz_dust",
+        "cakesticklib:quartz_dust",
+        "enderio:powdered_quartz",
+        "mekanism:dust_quartz",
+        "modern_industrialization:quartz_dust",
+        "oritech:quartz_dust"
+      ],
+      "tag": "c:dusts/quartz"
+    },
+    {
+      "name": "sodium_dust",
+      "material": "sodium",
+      "form": "dusts",
+      "preferred": "modern_industrialization:sodium_dust",
+      "members": [
+        "ltxi:sodium_dust",
+        "modern_industrialization:sodium_dust"
+      ],
+      "tag": "c:dusts/sodium"
+    },
+    {
+      "name": "sulfur_dust",
+      "material": "sulfur",
+      "form": "dusts",
+      "preferred": "mekanism:dust_sulfur",
+      "members": [
+        "cakesticklib:sulfur_dust",
+        "ic2:sulfur_dust",
+        "ltxi:sulfur_dust",
+        "mekanism:dust_sulfur",
+        "modern_industrialization:sulfur_dust"
+      ],
+      "tag": "c:dusts/sulfur"
+    },
+    {
+      "name": "wood_dust",
+      "material": "wood",
+      "form": "dusts",
+      "preferred": "mekanism:sawdust",
+      "members": [
+        "cakesticklib:sawdust",
+        "mekanism:sawdust"
+      ],
+      "tag": "c:dusts/wood",
+      "display_en": "Sawdust",
+      "display_zh": "木屑"
+    },
+    {
+      "name": "lithium_dust",
+      "material": "lithium",
+      "form": "dusts",
+      "preferred": "mekanism:dust_lithium",
+      "members": [
+        "ic2:lithium_dust",
+        "mekanism:dust_lithium"
+      ],
+      "tag": "c:dusts/lithium"
+    },
+    {
+      "name": "salt_dust",
+      "material": "salt",
+      "form": "dusts",
+      "preferred": "mekanism:salt",
+      "members": [
+        "mekanism:salt",
+        "modern_industrialization:salt_dust",
+        "tofucraft:salt"
+      ],
+      "tag": "c:dusts/salt"
+    },
+    {
+      "name": "raw_silicon",
+      "material": "silicon",
+      "form": "raw_materials",
+      "preferred": "oritech:raw_silicon",
+      "members": [
+        "cakesticklib:raw_silicon",
+        "oritech:raw_silicon"
+      ],
+      "tag": "c:raw_materials/silicon"
+    },
+    {
+      "name": "wrought_iron_ingot",
+      "material": "wrought_iron",
+      "form": "ingots",
+      "preferred": "cakesticklib:wrought_iron_ingot",
+      "members": [
+        "cakesticklib:wrought_iron_ingot",
+        "twilightforest:wrought_iron_bar"
+      ],
+      "tag": "c:ingots/wrought_iron"
+    },
+    {
+      "name": "wrought_iron_nugget",
+      "material": "wrought_iron",
+      "form": "nuggets",
+      "preferred": "cakesticklib:wrought_iron_nugget",
+      "members": [
+        "cakesticklib:wrought_iron_nugget"
+      ],
+      "tag": "c:nuggets/wrought_iron"
+    },
+    {
+      "name": "wrought_iron_block",
+      "material": "wrought_iron",
+      "form": "storage_blocks",
+      "preferred": "cakesticklib:wrought_iron_block",
+      "members": [
+        "cakesticklib:wrought_iron_block"
+      ],
+      "tag": "c:storage_blocks/wrought_iron"
+    },
+    {
+      "name": "charcoal_block",
+      "material": "charcoal",
+      "form": "storage_blocks",
+      "preferred": "mekanism:block_charcoal",
+      "members": [
+        "justdirethings:charcoal",
+        "mekanism:block_charcoal"
+      ],
+      "tag": "c:storage_blocks/charcoal"
+    },
+    {
+      "name": "salt_block",
+      "material": "salt",
+      "form": "storage_blocks",
+      "preferred": "modern_industrialization:salt_block",
+      "members": [
+        "modern_industrialization:salt_block",
+        "tofucraft:salt_block"
+      ],
+      "tag": "c:storage_blocks/salt",
+      "group": "storage_blocks/salt_nine"
+    },
+    {
+      "name": "iron_tiny_dust",
+      "material": "iron",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:iron_tiny_dust",
+      "members": [
+        "ic2:small_iron_dust",
+        "modern_industrialization:iron_tiny_dust",
+        "oritech:small_iron_dust"
+      ],
+      "tag": "c:tiny_dusts/iron"
+    },
+    {
+      "name": "gold_tiny_dust",
+      "material": "gold",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:gold_tiny_dust",
+      "members": [
+        "ic2:small_gold_dust",
+        "modern_industrialization:gold_tiny_dust",
+        "oritech:small_gold_dust"
+      ],
+      "tag": "c:tiny_dusts/gold"
+    },
+    {
+      "name": "copper_tiny_dust",
+      "material": "copper",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:copper_tiny_dust",
+      "members": [
+        "ic2:small_copper_dust",
+        "modern_industrialization:copper_tiny_dust",
+        "oritech:small_copper_dust"
+      ],
+      "tag": "c:tiny_dusts/copper"
+    },
+    {
+      "name": "tin_tiny_dust",
+      "material": "tin",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:tin_tiny_dust",
+      "members": [
+        "ic2:small_tin_dust",
+        "modern_industrialization:tin_tiny_dust"
+      ],
+      "tag": "c:tiny_dusts/tin"
+    },
+    {
+      "name": "lead_tiny_dust",
+      "material": "lead",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:lead_tiny_dust",
+      "members": [
+        "ic2:small_lead_dust",
+        "modern_industrialization:lead_tiny_dust"
+      ],
+      "tag": "c:tiny_dusts/lead"
+    },
+    {
+      "name": "silver_tiny_dust",
+      "material": "silver",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:silver_tiny_dust",
+      "members": [
+        "ic2:small_silver_dust",
+        "modern_industrialization:silver_tiny_dust"
+      ],
+      "tag": "c:tiny_dusts/silver"
+    },
+    {
+      "name": "bronze_tiny_dust",
+      "material": "bronze",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:bronze_tiny_dust",
+      "members": [
+        "ic2:small_bronze_dust",
+        "modern_industrialization:bronze_tiny_dust"
+      ],
+      "tag": "c:tiny_dusts/bronze"
+    },
+    {
+      "name": "sulfur_tiny_dust",
+      "material": "sulfur",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:sulfur_tiny_dust",
+      "members": [
+        "ic2:small_sulfur_dust",
+        "modern_industrialization:sulfur_tiny_dust"
+      ],
+      "tag": "c:tiny_dusts/sulfur"
+    },
+    {
+      "name": "lapis_tiny_dust",
+      "material": "lapis",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:lapis_tiny_dust",
+      "members": [
+        "ic2:small_lapis_dust",
+        "modern_industrialization:lapis_tiny_dust"
+      ],
+      "tag": "c:tiny_dusts/lapis"
+    },
+    {
+      "name": "nickel_tiny_dust",
+      "material": "nickel",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:nickel_tiny_dust",
+      "members": [
+        "modern_industrialization:nickel_tiny_dust",
+        "oritech:small_nickel_dust"
+      ],
+      "tag": "c:tiny_dusts/nickel"
+    },
+    {
+      "name": "platinum_tiny_dust",
+      "material": "platinum",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:platinum_tiny_dust",
+      "members": [
+        "modern_industrialization:platinum_tiny_dust",
+        "oritech:small_platinum_dust"
+      ],
+      "tag": "c:tiny_dusts/platinum"
+    },
+    {
+      "name": "uranium_tiny_dust",
+      "material": "uranium",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:uranium_tiny_dust",
+      "members": [
+        "modern_industrialization:uranium_tiny_dust",
+        "oritech:small_uranium_dust"
+      ],
+      "tag": "c:tiny_dusts/uranium"
+    },
+    {
+      "name": "plutonium_tiny_dust",
+      "material": "plutonium",
+      "form": "tiny_dusts",
+      "preferred": "modern_industrialization:plutonium_tiny_dust",
+      "members": [
+        "modern_industrialization:plutonium_tiny_dust",
+        "oritech:small_plutonium_dust"
+      ],
+      "tag": "c:tiny_dusts/plutonium"
+    },
+    {
+      "name": "flour",
+      "material": "wheat",
+      "form": "dusts",
+      "preferred": "cakesticklib:flour",
+      "members": [
+        "ae2cs:flour",
+        "cakesticklib:flour"
+      ],
+      "tag": "c:dusts/wheat",
+      "display_en": "Flour",
+      "display_zh": "面粉"
+    },
+    {
+      "name": "iron_plate",
+      "material": "iron",
+      "form": "plates",
+      "preferred": "modern_industrialization:iron_plate",
+      "members": [
+        "cakesticklib:iron_plate",
+        "ic2:iron_plate",
+        "modern_industrialization:iron_plate"
+      ],
+      "tag": "c:plates/iron"
+    },
+    {
+      "name": "gold_plate",
+      "material": "gold",
+      "form": "plates",
+      "preferred": "modern_industrialization:gold_plate",
+      "members": [
+        "cakesticklib:gold_plate",
+        "ic2:gold_plate",
+        "ltxi:gold_plate",
+        "modern_industrialization:gold_plate"
+      ],
+      "tag": "c:plates/gold"
+    },
+    {
+      "name": "copper_plate",
+      "material": "copper",
+      "form": "plates",
+      "preferred": "modern_industrialization:copper_plate",
+      "members": [
+        "cakesticklib:copper_plate",
+        "ic2:copper_plate",
+        "ltxi:copper_plate",
+        "modern_industrialization:copper_plate"
+      ],
+      "tag": "c:plates/copper"
+    },
+    {
+      "name": "tin_plate",
+      "material": "tin",
+      "form": "plates",
+      "preferred": "modern_industrialization:tin_plate",
+      "members": [
+        "ic2:tin_plate",
+        "modern_industrialization:tin_plate"
+      ],
+      "tag": "c:plates/tin"
+    },
+    {
+      "name": "lead_plate",
+      "material": "lead",
+      "form": "plates",
+      "preferred": "modern_industrialization:lead_plate",
+      "members": [
+        "ic2:lead_plate",
+        "modern_industrialization:lead_plate"
+      ],
+      "tag": "c:plates/lead"
+    },
+    {
+      "name": "bronze_plate",
+      "material": "bronze",
+      "form": "plates",
+      "preferred": "modern_industrialization:bronze_plate",
+      "members": [
+        "ic2:bronze_plate",
+        "modern_industrialization:bronze_plate"
+      ],
+      "tag": "c:plates/bronze"
+    },
+    {
+      "name": "steel_plate",
+      "material": "steel",
+      "form": "plates",
+      "preferred": "modern_industrialization:steel_plate",
+      "members": [
+        "cakesticklib:steel_plate",
+        "ic2:steel_plate",
+        "modern_industrialization:steel_plate"
+      ],
+      "tag": "c:plates/steel"
+    },
+    {
+      "name": "silver_plate",
+      "material": "silver",
+      "form": "plates",
+      "preferred": "modern_industrialization:silver_plate",
+      "members": [
+        "ltxi:silver_plate",
+        "modern_industrialization:silver_plate"
+      ],
+      "tag": "c:plates/silver"
+    },
+    {
+      "name": "silicon_plate",
+      "material": "silicon",
+      "form": "plates",
+      "preferred": "modern_industrialization:silicon_plate",
+      "members": [
+        "ltxi:silicon_plate",
+        "modern_industrialization:silicon_plate"
+      ],
+      "tag": "c:plates/silicon"
+    },
+    {
+      "name": "titanium_plate",
+      "material": "titanium",
+      "form": "plates",
+      "preferred": "modern_industrialization:titanium_plate",
+      "members": [
+        "ltxi:titanium_plate",
+        "modern_industrialization:titanium_plate"
+      ],
+      "tag": "c:plates/titanium"
+    },
+    {
+      "name": "carbon_fiber_plate",
+      "material": "carbon_fiber",
+      "form": "plates",
+      "preferred": "cakesticklib:carbon_plate",
+      "members": [
+        "cakesticklib:carbon_plate",
+        "ic2:carbon_plate"
+      ],
+      "tag": "c:plates/carbon_fiber"
+    },
+    {
+      "name": "plastic_sheet",
+      "material": "plastic",
+      "form": "plates",
+      "preferred": "oritech:plastic_sheet",
+      "members": [
+        "cakesticklib:plastic",
+        "industrialforegoing:plastic",
+        "oritech:plastic_sheet"
+      ],
+      "tag": "c:plates/plastic",
+      "display_en": "Plastic Sheet",
+      "display_zh": "塑料片"
+    },
+    {
+      "name": "iron_gear",
+      "material": "iron",
+      "form": "gears",
+      "preferred": "modern_industrialization:iron_gear",
+      "members": [
+        "cakesticklib:iron_gear",
+        "enderio:iron_gear",
+        "industrialforegoing:iron_gear",
+        "modern_industrialization:iron_gear"
+      ],
+      "tag": "c:gears/iron"
+    },
+    {
+      "name": "gold_gear",
+      "material": "gold",
+      "form": "gears",
+      "preferred": "modern_industrialization:gold_gear",
+      "members": [
+        "cakesticklib:gold_gear",
+        "industrialforegoing:gold_gear",
+        "modern_industrialization:gold_gear"
+      ],
+      "tag": "c:gears/gold"
+    },
+    {
+      "name": "copper_gear",
+      "material": "copper",
+      "form": "gears",
+      "preferred": "modern_industrialization:copper_gear",
+      "members": [
+        "cakesticklib:copper_gear",
+        "modern_industrialization:copper_gear"
+      ],
+      "tag": "c:gears/copper"
+    },
+    {
+      "name": "steel_gear",
+      "material": "steel",
+      "form": "gears",
+      "preferred": "modern_industrialization:steel_gear",
+      "members": [
+        "cakesticklib:steel_gear",
+        "modern_industrialization:steel_gear"
+      ],
+      "tag": "c:gears/steel"
+    },
+    {
+      "name": "titanium_gear",
+      "material": "titanium",
+      "form": "gears",
+      "preferred": "modern_industrialization:titanium_gear",
+      "members": [
+        "ltxi:titanium_gear",
+        "modern_industrialization:titanium_gear"
+      ],
+      "tag": "c:gears/titanium"
+    },
+    {
+      "name": "wooden_gear",
+      "material": "wood",
+      "form": "gears",
+      "preferred": "cakesticklib:wooden_gear",
+      "members": [
+        "ae2cs:wooden_gear",
+        "cakesticklib:wooden_gear"
+      ],
+      "tag": "c:gears/wood",
+      "display_en": "Wooden Gear",
+      "display_zh": "木齿轮"
+    },
+    {
+      "name": "uu_matter",
+      "material": "uu_matter",
+      "form": "matter",
+      "preferred": "mekmm:uu_matter",
+      "members": [
+        "ic2:uu_matter",
+        "mekmm:uu_matter"
+      ],
+      "tag": "c:uu_matter",
+      "display_en": "UU Matter",
+      "display_zh": "UU物质"
+    },
+    {
+      "name": "uu_matter_bucket",
+      "material": "uu_matter",
+      "form": "buckets",
+      "preferred": "modern_industrialization:uu_matter_bucket",
+      "members": [
+        "ic2:uu_matter_bucket",
+        "modern_industrialization:uu_matter_bucket"
+      ],
+      "tag": "c:buckets/uu_matter"
+    },
+    {
+      "name": "steam_bucket",
+      "material": "steam",
+      "form": "buckets",
+      "preferred": "mekanism:steam_bucket",
+      "members": [
+        "ic2:steam_bucket",
+        "mekanism:steam_bucket",
+        "modern_industrialization:steam_bucket",
+        "oritech:still_steam_bucket"
+      ],
+      "tag": "c:buckets/steam"
+    },
+    {
+      "name": "heavy_water_bucket",
+      "material": "heavy_water",
+      "form": "buckets",
+      "preferred": "mekanism:heavy_water_bucket",
+      "members": [
+        "ic2:heavy_water_bucket",
+        "mekanism:heavy_water_bucket",
+        "modern_industrialization:heavy_water_bucket"
+      ],
+      "tag": "c:buckets/heavy_water"
+    },
+    {
+      "name": "hydrogen_bucket",
+      "material": "hydrogen",
+      "form": "buckets",
+      "preferred": "modern_industrialization:hydrogen_bucket",
+      "members": [
+        "ic2:hydrogen_bucket",
+        "ltxi:hydrogen_bucket",
+        "modern_industrialization:hydrogen_bucket"
+      ],
+      "tag": "c:buckets/hydrogen"
+    },
+    {
+      "name": "oxygen_bucket",
+      "material": "oxygen",
+      "form": "buckets",
+      "preferred": "modern_industrialization:oxygen_bucket",
+      "members": [
+        "ic2:oxygen_bucket",
+        "ltxi:oxygen_bucket",
+        "modern_industrialization:oxygen_bucket"
+      ],
+      "tag": "c:buckets/oxygen"
+    },
+    {
+      "name": "chlorine_bucket",
+      "material": "chlorine",
+      "form": "buckets",
+      "preferred": "modern_industrialization:chlorine_bucket",
+      "members": [
+        "ltxi:chlorine_bucket",
+        "modern_industrialization:chlorine_bucket"
+      ],
+      "tag": "c:buckets/chlorine"
+    },
+    {
+      "name": "nitrogen_bucket",
+      "material": "nitrogen",
+      "form": "buckets",
+      "preferred": "modern_industrialization:nitrogen_bucket",
+      "members": [
+        "ltxi:nitrogen_bucket",
+        "modern_industrialization:nitrogen_bucket"
+      ],
+      "tag": "c:buckets/nitrogen"
+    },
+    {
+      "name": "methane_bucket",
+      "material": "methane",
+      "form": "buckets",
+      "preferred": "modern_industrialization:methane_bucket",
+      "members": [
+        "ltxi:methane_bucket",
+        "modern_industrialization:methane_bucket"
+      ],
+      "tag": "c:buckets/methane"
+    },
+    {
+      "name": "sulfuric_acid_bucket",
+      "material": "sulfuric_acid",
+      "form": "buckets",
+      "preferred": "mekanism:sulfuric_acid_bucket",
+      "members": [
+        "cakesticklib:sulfuric_acid_bucket",
+        "ltxi:sulfuric_acid_bucket",
+        "mekanism:sulfuric_acid_bucket",
+        "modern_industrialization:sulfuric_acid_bucket",
+        "oritech:still_sulfuric_acid_bucket"
+      ],
+      "tag": "c:buckets/sulfuric_acid"
+    },
+    {
+      "name": "hydrochloric_acid_bucket",
+      "material": "hydrochloric_acid",
+      "form": "buckets",
+      "preferred": "modern_industrialization:hydrochloric_acid_bucket",
+      "members": [
+        "ltxi:hydrochloric_acid_bucket",
+        "modern_industrialization:hydrochloric_acid_bucket"
+      ],
+      "tag": "c:buckets/hydrochloric_acid"
+    },
+    {
+      "name": "creosote_bucket",
+      "material": "creosote",
+      "form": "buckets",
+      "preferred": "modern_industrialization:creosote_bucket",
+      "members": [
+        "ic2:creosote_bucket",
+        "modern_industrialization:creosote_bucket"
+      ],
+      "tag": "c:buckets/creosote"
+    },
+    {
+      "name": "crude_oil_bucket",
+      "material": "crude_oil",
+      "form": "buckets",
+      "preferred": "modern_industrialization:crude_oil_bucket",
+      "members": [
+        "cakesticklib:crude_oil_bucket",
+        "modern_industrialization:crude_oil_bucket",
+        "oritech:still_oil_bucket"
+      ],
+      "tag": "c:buckets/crude_oil"
+    },
+    {
+      "name": "diesel_bucket",
+      "material": "diesel",
+      "form": "buckets",
+      "preferred": "modern_industrialization:diesel_bucket",
+      "members": [
+        "modern_industrialization:diesel_bucket",
+        "oritech:still_diesel_bucket"
+      ],
+      "tag": "c:buckets/diesel"
+    },
+    {
+      "name": "naphtha_bucket",
+      "material": "naphtha",
+      "form": "buckets",
+      "preferred": "modern_industrialization:naphtha_bucket",
+      "members": [
+        "modern_industrialization:naphtha_bucket",
+        "oritech:still_naphtha_bucket"
+      ],
+      "tag": "c:buckets/naphtha"
+    },
+    {
+      "name": "biofuel_bucket",
+      "material": "biofuel",
+      "form": "buckets",
+      "preferred": "modern_industrialization:biodiesel_bucket",
+      "members": [
+        "industrialforegoing:biofuel_bucket",
+        "modern_industrialization:biodiesel_bucket",
+        "oritech:still_biofuel_bucket"
+      ],
+      "tag": "c:buckets/biofuel"
+    },
+    {
+      "name": "latex_bucket",
+      "material": "latex",
+      "form": "buckets",
+      "preferred": "cakesticklib:latex_bucket",
+      "members": [
+        "cakesticklib:latex_bucket",
+        "industrialforegoing:latex_bucket"
+      ],
+      "tag": "c:buckets/latex"
+    },
+    {
+      "name": "ethanol_bucket",
+      "material": "ethanol",
+      "form": "buckets",
+      "preferred": "mekanismgenerators:bioethanol_bucket",
+      "members": [
+        "mekanismgenerators:bioethanol_bucket",
+        "modern_industrialization:ethanol_bucket"
+      ],
+      "tag": "c:buckets/ethanol"
+    },
+    {
+      "name": "molten_redstone_bucket",
+      "material": "molten_redstone",
+      "form": "buckets",
+      "preferred": "modern_industrialization:molten_redstone_bucket",
+      "members": [
+        "cakesticklib:molten_redstone_bucket",
+        "modern_industrialization:molten_redstone_bucket"
+      ],
+      "tag": "c:buckets/molten_redstone"
+    },
+    {
+      "name": "scrap",
+      "material": "scrap",
+      "form": "scraps",
+      "preferred": "mekmm:scrap",
+      "members": [
+        "ic2:scrap",
+        "mekmm:scrap"
+      ],
+      "tag": "c:scrap",
+      "display_en": "Scrap",
+      "display_zh": "废料"
+    },
+    {
+      "name": "scrap_box",
+      "material": "scrap",
+      "form": "scrap_boxes",
+      "preferred": "ic2:scrap_box",
+      "members": [
+        "ic2:scrap_box"
+      ],
+      "tag": "c:scrap_boxes/basic",
+      "display_en": "Scrap Box (9 Scrap)",
+      "display_zh": "废料盒（9 份）",
+      "units": 81
+    },
+    {
+      "name": "compressed_scrap_box",
+      "material": "scrap",
+      "form": "scrap_boxes",
+      "preferred": "mekmm:scrap_box",
+      "members": [
+        "mekmm:scrap_box"
+      ],
+      "tag": "c:scrap_boxes/compressed",
+      "display_en": "Compressed Scrap Box (64 Scrap)",
+      "display_zh": "压缩废料盒（64 份）",
+      "units": 576
+    },
+    {
+      "name": "silicon_wafer",
+      "material": "silicon",
+      "form": "wafers",
+      "preferred": "modern_industrialization:silicon_wafer",
+      "members": [
+        "modern_industrialization:silicon_wafer",
+        "oritech:silicon_wafer"
+      ],
+      "tag": "c:wafers/silicon",
+      "display_en": "Silicon Wafer",
+      "display_zh": "硅晶圆",
+      "unit_material": "silicon_wafer"
+    },
+    {
+      "name": "bronze_axe",
+      "material": "bronze",
+      "form": "equipment",
+      "preferred": "mekanismtools:bronze_axe",
+      "canonical": "mekanismtools:bronze_axe",
+      "members": [
+        "ic2:bronze_axe"
+      ],
+      "tag": "c:equipment/bronze_axe",
+      "group": "equipment/bronze_axe",
+      "equipment_recipes": [
+        "ic2:shaped/bronze_axe",
+        "mekanismtools:bronze/tools/axe"
+      ]
+    },
+    {
+      "name": "bronze_boots",
+      "material": "bronze",
+      "form": "equipment",
+      "preferred": "mekanismtools:bronze_boots",
+      "canonical": "mekanismtools:bronze_boots",
+      "members": [
+        "ic2:bronze_boots"
+      ],
+      "tag": "c:equipment/bronze_boots",
+      "group": "equipment/bronze_boots",
+      "equipment_recipes": [
+        "ic2:shaped/bronze_boots",
+        "mekanismtools:bronze/armor/boots"
+      ]
+    },
+    {
+      "name": "bronze_chestplate",
+      "material": "bronze",
+      "form": "equipment",
+      "preferred": "mekanismtools:bronze_chestplate",
+      "canonical": "mekanismtools:bronze_chestplate",
+      "members": [
+        "ic2:bronze_chestplate"
+      ],
+      "tag": "c:equipment/bronze_chestplate",
+      "group": "equipment/bronze_chestplate",
+      "equipment_recipes": [
+        "ic2:shaped/bronze_chestplate",
+        "mekanismtools:bronze/armor/chestplate"
+      ]
+    },
+    {
+      "name": "bronze_helmet",
+      "material": "bronze",
+      "form": "equipment",
+      "preferred": "mekanismtools:bronze_helmet",
+      "canonical": "mekanismtools:bronze_helmet",
+      "members": [
+        "ic2:bronze_helmet"
+      ],
+      "tag": "c:equipment/bronze_helmet",
+      "group": "equipment/bronze_helmet",
+      "equipment_recipes": [
+        "ic2:shaped/bronze_helmet",
+        "mekanismtools:bronze/armor/helmet"
+      ]
+    },
+    {
+      "name": "bronze_hoe",
+      "material": "bronze",
+      "form": "equipment",
+      "preferred": "mekanismtools:bronze_hoe",
+      "canonical": "mekanismtools:bronze_hoe",
+      "members": [
+        "ic2:bronze_hoe"
+      ],
+      "tag": "c:equipment/bronze_hoe",
+      "group": "equipment/bronze_hoe",
+      "equipment_recipes": [
+        "ic2:shaped/bronze_hoe",
+        "mekanismtools:bronze/tools/hoe"
+      ]
+    },
+    {
+      "name": "bronze_leggings",
+      "material": "bronze",
+      "form": "equipment",
+      "preferred": "mekanismtools:bronze_leggings",
+      "canonical": "mekanismtools:bronze_leggings",
+      "members": [
+        "ic2:bronze_leggings"
+      ],
+      "tag": "c:equipment/bronze_leggings",
+      "group": "equipment/bronze_leggings",
+      "equipment_recipes": [
+        "ic2:shaped/bronze_leggings",
+        "mekanismtools:bronze/armor/leggings"
+      ]
+    },
+    {
+      "name": "bronze_pickaxe",
+      "material": "bronze",
+      "form": "equipment",
+      "preferred": "mekanismtools:bronze_pickaxe",
+      "canonical": "mekanismtools:bronze_pickaxe",
+      "members": [
+        "ic2:bronze_pickaxe"
+      ],
+      "tag": "c:equipment/bronze_pickaxe",
+      "group": "equipment/bronze_pickaxe",
+      "equipment_recipes": [
+        "ic2:shaped/bronze_pickaxe",
+        "mekanismtools:bronze/tools/pickaxe"
+      ]
+    },
+    {
+      "name": "bronze_shovel",
+      "material": "bronze",
+      "form": "equipment",
+      "preferred": "mekanismtools:bronze_shovel",
+      "canonical": "mekanismtools:bronze_shovel",
+      "members": [
+        "ic2:bronze_shovel"
+      ],
+      "tag": "c:equipment/bronze_shovel",
+      "group": "equipment/bronze_shovel",
+      "equipment_recipes": [
+        "ic2:shaped/bronze_shovel",
+        "mekanismtools:bronze/tools/shovel"
+      ]
+    },
+    {
+      "name": "bronze_sword",
+      "material": "bronze",
+      "form": "equipment",
+      "preferred": "mekanismtools:bronze_sword",
+      "canonical": "mekanismtools:bronze_sword",
+      "members": [
+        "ic2:bronze_sword"
+      ],
+      "tag": "c:equipment/bronze_sword",
+      "group": "equipment/bronze_sword",
+      "equipment_recipes": [
+        "ic2:shaped/bronze_sword",
+        "mekanismtools:bronze/tools/sword"
+      ]
+    },
+    {
+      "name": "diamond_fillet_knife",
+      "material": "diamond",
+      "form": "equipment",
+      "preferred": "aquaculture:diamond_fillet_knife",
+      "canonical": "aquaculture:diamond_fillet_knife",
+      "members": [
+        "prefab:item_swift_blade_diamond"
+      ],
+      "tag": "c:equipment/diamond_fillet_knife",
+      "group": "equipment/diamond_fillet_knife",
+      "equipment_recipes": [
+        "aquaculture:diamond_fillet_knife",
+        "prefab:swift_blade_diamond"
+      ]
+    },
+    {
+      "name": "gold_fillet_knife",
+      "material": "gold",
+      "form": "equipment",
+      "preferred": "aquaculture:gold_fillet_knife",
+      "canonical": "aquaculture:gold_fillet_knife",
+      "members": [
+        "prefab:item_swift_blade_gold"
+      ],
+      "tag": "c:equipment/gold_fillet_knife",
+      "group": "equipment/gold_fillet_knife",
+      "equipment_recipes": [
+        "aquaculture:gold_fillet_knife",
+        "prefab:swift_blade_gold"
+      ]
+    },
+    {
+      "name": "iron_chisel",
+      "material": "iron",
+      "form": "equipment",
+      "preferred": "cakesticklib:chisel",
+      "canonical": "cakesticklib:chisel",
+      "members": [
+        "aquaculture:iron_fillet_knife",
+        "prefab:item_swift_blade_iron"
+      ],
+      "tag": "c:equipment/iron_chisel",
+      "group": "equipment/iron_chisel",
+      "equipment_recipes": [
+        "aquaculture:iron_fillet_knife",
+        "cakesticklib:chisel",
+        "prefab:swift_blade_iron"
+      ]
+    },
+    {
+      "name": "wooden_fillet_knife",
+      "material": "wood",
+      "form": "equipment",
+      "preferred": "aquaculture:wooden_fillet_knife",
+      "canonical": "aquaculture:wooden_fillet_knife",
+      "members": [
+        "prefab:item_swift_blade_wood"
+      ],
+      "tag": "c:equipment/wooden_fillet_knife",
+      "group": "equipment/wooden_fillet_knife",
+      "equipment_recipes": [
+        "aquaculture:wooden_fillet_knife",
+        "prefab:swift_blade_wood"
+      ]
+    },
+    {
+      "name": "stone_fillet_knife",
+      "material": "stone",
+      "form": "equipment",
+      "preferred": "aquaculture:stone_fillet_knife",
+      "canonical": "aquaculture:stone_fillet_knife",
+      "members": [
+        "prefab:item_swift_blade_stone"
+      ],
+      "tag": "c:equipment/stone_fillet_knife",
+      "group": "equipment/stone_fillet_knife",
+      "equipment_recipes": [
+        "aquaculture:stone_fillet_knife",
+        "prefab:swift_blade_stone"
+      ]
     }
   ]
 }

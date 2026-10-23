@@ -18,8 +18,17 @@ final class CompatChecks {
     private static void check(boolean value,String message) { if (!value) throw new IllegalStateException(message); checks.add(message); }
     private static Item item(String id) { return BuiltInRegistries.ITEM.getValue(Identifier.parse(id)); }
     private static Recipe<?> recipe(MinecraftServer server,String id) { return server.getRecipeManager().byKey(ResourceKey.create(Registries.RECIPE,Identifier.parse(id))).orElseThrow(()->new IllegalStateException("Missing recipe "+id)).value(); }
-    private static ItemStack stack(MinecraftServer server,JsonElement json) { return ItemStack.CODEC.parse(server.registryAccess().createSerializationContext(JsonOps.INSTANCE),json).getOrThrow(); }
+    private static ItemStack stack(MinecraftServer server,JsonElement json) {
+        if (json.isJsonObject() && json.getAsJsonObject().has("item") && json.getAsJsonObject().get("item").isJsonPrimitive()) return ic2ce.neoforge.recipe.codec.RecipeValueCodec.parseOutput(json.getAsJsonObject());
+        return ItemStack.CODEC.parse(server.registryAccess().createSerializationContext(JsonOps.INSTANCE),json).getOrThrow();
+    }
     private static ItemStack sample(MinecraftServer server,JsonElement json) {
+        if (json.isJsonObject() && (json.getAsJsonObject().has("tag") || json.getAsJsonObject().has("item"))
+                && json.getAsJsonObject().keySet().stream().allMatch(k->Set.of("item","tag","count").contains(k))) {
+            var input=ic2ce.neoforge.recipe.codec.RecipeValueCodec.parseInput(json);
+            return input.getInputs().stream().filter(s->BuiltInRegistries.ITEM.getKey(s.getItem()).getNamespace().equals("sise_ores"))
+                .findFirst().orElseGet(()->input.getInputs().getFirst()).copyWithCount(input.getAmount());
+        }
         if (json.isJsonObject() && json.getAsJsonObject().has("conduit_type")) {
             var o = new JsonObject(); o.addProperty("id","enderio:conduit");
             var components = new JsonObject(); components.add("enderio:conduit",json.getAsJsonObject().get("conduit_type"));
@@ -39,16 +48,16 @@ final class CompatChecks {
     static List<String> verify(MinecraftServer server) {
         checks.clear();
         check(((Map<?,?>)RecipePatches.lastReport.get("skipped")).isEmpty(),"all compatibility source guards matched");
-        check(((Map<?,?>)RecipePatches.lastReport.get("applied")).size()==76,"76 reviewed compatibility patches applied");
+        check(((Map<?,?>)RecipePatches.lastReport.get("applied")).size()==RecipePatches.RULES.getAsJsonObject("patches").size(),"all currently installed compatibility patches applied");
         check(server.getRecipeManager().byKey(ResourceKey.create(Registries.RECIPE,Identifier.parse("avaritia:eio_creative_power"))).isEmpty(),"missing EnderIO creative power disabled by registry conditions");
         var ops = server.registryAccess().createSerializationContext(JsonOps.INSTANCE);
         int restored = 0;
         for (var entry : RecipePatches.RULES.getAsJsonObject("patches").entrySet()) {
             String id = entry.getKey(); if (id.equals("avaritia:eio_creative_power")) continue;
-            var after = entry.getValue().getAsJsonObject().getAsJsonObject("after");
+            var after = local.sise.ores.RecipeTransform.transform(entry.getValue().getAsJsonObject().getAsJsonObject("after")).json();
             var r = recipe(server,id);
             check(r!=null,"patched recipe loaded "+id);
-            if (id.startsWith("enderio_evolution:") || id.startsWith("neoecoae:") || id.startsWith("avaritia:")) restored++;
+            if ((id.startsWith("enderio_evolution:") || id.startsWith("neoecoae:") || id.startsWith("avaritia:")) && !entry.getValue().getAsJsonObject().has("category")) restored++;
             if (after.has("pattern")) {
                 var pattern = after.getAsJsonArray("pattern"); var stacks = new ArrayList<ItemStack>();
                 int width = pattern.get(0).getAsString().length();

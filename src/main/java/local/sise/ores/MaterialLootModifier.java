@@ -17,11 +17,12 @@ public final class MaterialLootModifier extends LootModifier {
 
     public MaterialLootModifier(LootItemCondition[] conditions, int priority) { super(conditions, priority); }
     public static ItemStack normalize(ItemStack stack) {
-        if (stack.isEmpty() || !stack.isComponentsPatchEmpty()) return stack;
+        if (stack.isEmpty()) return stack;
         var material = MaterialCatalog.BY_SOURCE.get(BuiltInRegistries.ITEM.getKey(stack.getItem()).toString());
         if (material == null) return stack;
+        if (!material.form().equals("equipment") && !stack.isComponentsPatchEmpty()) return stack;
         var target = BuiltInRegistries.ITEM.getValue(Identifier.parse(material.target()));
-        return target == null || target == Items.AIR ? stack : new ItemStack(target, stack.getCount());
+        return target == null || target == Items.AIR ? stack : material.form().equals("equipment") ? stack.transmuteCopy(target) : new ItemStack(target, stack.getCount());
     }
     @Override protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> loot, LootContext context) {
         loot.replaceAll(MaterialLootModifier::normalize);

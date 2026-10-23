@@ -27,7 +27,10 @@ public final class OreWorldgen {
             var result = new IdentityHashMap<Block, Block>();
             SOURCES.forEach((id, material) -> {
                 var source = BuiltInRegistries.BLOCK.getValue(Identifier.parse(id));
-                if (source == null || source == Blocks.AIR) throw new IllegalStateException("Missing reviewed ore " + id);
+                if (source == null || source == Blocks.AIR) {
+                    if (!net.neoforged.fml.ModList.get().isLoaded(Identifier.parse(id).getNamespace())) return;
+                    throw new IllegalStateException("Missing reviewed ore " + id);
+                }
                 result.put(source, SiseOres.MATERIAL_BLOCKS.get(material.name()).get());
             });
             return Collections.unmodifiableMap(result);

@@ -1,0 +1,427 @@
+{
+  "version": 2,
+  "fluids": [
+    {
+      "name": "uu_matter",
+      "preferred": "modern_industrialization:uu_matter",
+      "members": [
+        "ic2:uu_matter",
+        "modern_industrialization:uu_matter"
+      ],
+      "aliases": [
+        "ic2:flowing_uu_matter",
+        "ic2:uu_matter",
+        "modern_industrialization:uu_matter"
+      ],
+      "buckets": [
+        "ic2:uu_matter_bucket",
+        "modern_industrialization:uu_matter_bucket"
+      ],
+      "tag": "c:uu_matter"
+    },
+    {
+      "name": "steam",
+      "preferred": "mekanism:steam",
+      "members": [
+        "ic2:steam",
+        "mekanism:steam",
+        "modern_industrialization:steam",
+        "oritech:still_steam"
+      ],
+      "aliases": [
+        "ic2:steam",
+        "mekanism:flowing_steam",
+        "mekanism:steam",
+        "modern_industrialization:steam",
+        "oritech:flowing_steam",
+        "oritech:still_steam"
+      ],
+      "buckets": [
+        "ic2:steam_bucket",
+        "mekanism:steam_bucket",
+        "modern_industrialization:steam_bucket",
+        "oritech:still_steam_bucket"
+      ],
+      "tag": "c:steam"
+    },
+    {
+      "name": "heavy_water",
+      "preferred": "mekanism:heavy_water",
+      "members": [
+        "ic2:heavy_water",
+        "mekanism:heavy_water",
+        "modern_industrialization:heavy_water"
+      ],
+      "aliases": [
+        "ic2:flowing_heavy_water",
+        "ic2:heavy_water",
+        "mekanism:flowing_heavy_water",
+        "mekanism:heavy_water",
+        "modern_industrialization:heavy_water"
+      ],
+      "buckets": [
+        "ic2:heavy_water_bucket",
+        "mekanism:heavy_water_bucket",
+        "modern_industrialization:heavy_water_bucket"
+      ],
+      "tag": "c:heavy_water"
+    },
+    {
+      "name": "hydrogen",
+      "preferred": "modern_industrialization:hydrogen",
+      "members": [
+        "ic2:hydrogen",
+        "ltxi:hydrogen",
+        "modern_industrialization:hydrogen"
+      ],
+      "aliases": [
+        "ic2:hydrogen",
+        "ltxi:flowing_hydrogen",
+        "ltxi:hydrogen",
+        "modern_industrialization:hydrogen"
+      ],
+      "buckets": [
+        "ic2:hydrogen_bucket",
+        "ltxi:hydrogen_bucket",
+        "modern_industrialization:hydrogen_bucket"
+      ],
+      "tag": "c:hydrogen"
+    },
+    {
+      "name": "oxygen",
+      "preferred": "modern_industrialization:oxygen",
+      "members": [
+        "ic2:oxygen",
+        "ltxi:oxygen",
+        "modern_industrialization:oxygen"
+      ],
+      "aliases": [
+        "ic2:oxygen",
+        "ltxi:flowing_oxygen",
+        "ltxi:oxygen",
+        "modern_industrialization:oxygen"
+      ],
+      "buckets": [
+        "ic2:oxygen_bucket",
+        "ltxi:oxygen_bucket",
+        "modern_industrialization:oxygen_bucket"
+      ],
+      "tag": "c:oxygen"
+    },
+    {
+      "name": "chlorine",
+      "preferred": "modern_industrialization:chlorine",
+      "members": [
+        "ltxi:chlorine",
+        "modern_industrialization:chlorine"
+      ],
+      "aliases": [
+        "ltxi:chlorine",
+        "ltxi:flowing_chlorine",
+        "modern_industrialization:chlorine"
+      ],
+      "buckets": [
+        "ltxi:chlorine_bucket",
+        "modern_industrialization:chlorine_bucket"
+      ],
+      "tag": "c:chlorine"
+    },
+    {
+      "name": "nitrogen",
+      "preferred": "modern_industrialization:nitrogen",
+      "members": [
+        "ltxi:nitrogen",
+        "modern_industrialization:nitrogen"
+      ],
+      "aliases": [
+        "ltxi:flowing_nitrogen",
+        "ltxi:nitrogen",
+        "modern_industrialization:nitrogen"
+      ],
+      "buckets": [
+        "ltxi:nitrogen_bucket",
+        "modern_industrialization:nitrogen_bucket"
+      ],
+      "tag": "c:nitrogen"
+    },
+    {
+      "name": "methane",
+      "preferred": "modern_industrialization:methane",
+      "members": [
+        "ltxi:methane",
+        "modern_industrialization:methane"
+      ],
+      "aliases": [
+        "ltxi:flowing_methane",
+        "ltxi:methane",
+        "modern_industrialization:methane"
+      ],
+      "buckets": [
+        "ltxi:methane_bucket",
+        "modern_industrialization:methane_bucket"
+      ],
+      "tag": "c:methane"
+    },
+    {
+      "name": "sulfuric_acid",
+      "preferred": "mekanism:sulfuric_acid",
+      "members": [
+        "cakesticklib:sulfuric_acid",
+        "ltxi:sulfuric_acid",
+        "mekanism:sulfuric_acid",
+        "modern_industrialization:sulfuric_acid",
+        "oritech:still_sulfuric_acid"
+      ],
+      "aliases": [
+        "cakesticklib:sulfuric_acid",
+        "cakesticklib:sulfuric_acid_flowing",
+        "ltxi:flowing_sulfuric_acid",
+        "ltxi:sulfuric_acid",
+        "mekanism:flowing_sulfuric_acid",
+        "mekanism:sulfuric_acid",
+        "modern_industrialization:sulfuric_acid",
+        "oritech:flowing_sulfuric_acid",
+        "oritech:still_sulfuric_acid"
+      ],
+      "buckets": [
+        "cakesticklib:sulfuric_acid_bucket",
+        "ltxi:sulfuric_acid_bucket",
+        "mekanism:sulfuric_acid_bucket",
+        "modern_industrialization:sulfuric_acid_bucket",
+        "oritech:still_sulfuric_acid_bucket"
+      ],
+      "tag": "c:sulfuric_acid"
+    },
+    {
+      "name": "hydrochloric_acid",
+      "preferred": "modern_industrialization:hydrochloric_acid",
+      "members": [
+        "ltxi:hydrochloric_acid",
+        "modern_industrialization:hydrochloric_acid"
+      ],
+      "aliases": [
+        "ltxi:flowing_hydrochloric_acid",
+        "ltxi:hydrochloric_acid",
+        "modern_industrialization:hydrochloric_acid"
+      ],
+      "buckets": [
+        "ltxi:hydrochloric_acid_bucket",
+        "modern_industrialization:hydrochloric_acid_bucket"
+      ],
+      "tag": "c:hydrochloric_acid"
+    },
+    {
+      "name": "creosote",
+      "preferred": "modern_industrialization:creosote",
+      "members": [
+        "ic2:creosote",
+        "modern_industrialization:creosote"
+      ],
+      "aliases": [
+        "ic2:creosote",
+        "ic2:flowing_creosote",
+        "modern_industrialization:creosote"
+      ],
+      "buckets": [
+        "ic2:creosote_bucket",
+        "modern_industrialization:creosote_bucket"
+      ],
+      "tag": "c:creosote"
+    },
+    {
+      "name": "crude_oil",
+      "preferred": "modern_industrialization:crude_oil",
+      "members": [
+        "cakesticklib:crude_oil",
+        "modern_industrialization:crude_oil",
+        "oritech:still_oil"
+      ],
+      "aliases": [
+        "cakesticklib:crude_oil",
+        "cakesticklib:crude_oil_flowing",
+        "modern_industrialization:crude_oil",
+        "oritech:flowing_oil",
+        "oritech:still_oil"
+      ],
+      "buckets": [
+        "cakesticklib:crude_oil_bucket",
+        "modern_industrialization:crude_oil_bucket",
+        "oritech:still_oil_bucket"
+      ],
+      "tag": "c:crude_oil"
+    },
+    {
+      "name": "diesel",
+      "preferred": "modern_industrialization:diesel",
+      "members": [
+        "modern_industrialization:diesel",
+        "oritech:still_diesel"
+      ],
+      "aliases": [
+        "modern_industrialization:diesel",
+        "oritech:flowing_diesel",
+        "oritech:still_diesel"
+      ],
+      "buckets": [
+        "modern_industrialization:diesel_bucket",
+        "oritech:still_diesel_bucket"
+      ],
+      "tag": "c:diesel"
+    },
+    {
+      "name": "naphtha",
+      "preferred": "modern_industrialization:naphtha",
+      "members": [
+        "modern_industrialization:naphtha",
+        "oritech:still_naphtha"
+      ],
+      "aliases": [
+        "modern_industrialization:naphtha",
+        "oritech:flowing_naphtha",
+        "oritech:still_naphtha"
+      ],
+      "buckets": [
+        "modern_industrialization:naphtha_bucket",
+        "oritech:still_naphtha_bucket"
+      ],
+      "tag": "c:naphtha"
+    },
+    {
+      "name": "biofuel",
+      "preferred": "modern_industrialization:biodiesel",
+      "members": [
+        "industrialforegoing:biofuel",
+        "modern_industrialization:biodiesel",
+        "oritech:still_biofuel"
+      ],
+      "aliases": [
+        "industrialforegoing:biofuel",
+        "industrialforegoing:biofuel_flowing",
+        "modern_industrialization:biodiesel",
+        "oritech:flowing_biofuel",
+        "oritech:still_biofuel"
+      ],
+      "buckets": [
+        "industrialforegoing:biofuel_bucket",
+        "modern_industrialization:biodiesel_bucket",
+        "oritech:still_biofuel_bucket"
+      ],
+      "tag": "c:biofuel"
+    },
+    {
+      "name": "latex",
+      "preferred": "cakesticklib:latex",
+      "members": [
+        "cakesticklib:latex",
+        "industrialforegoing:latex"
+      ],
+      "aliases": [
+        "cakesticklib:latex",
+        "cakesticklib:latex_flowing",
+        "industrialforegoing:latex",
+        "industrialforegoing:latex_flowing"
+      ],
+      "buckets": [
+        "cakesticklib:latex_bucket",
+        "industrialforegoing:latex_bucket"
+      ],
+      "tag": "c:latex"
+    },
+    {
+      "name": "ethanol",
+      "preferred": "mekanismgenerators:bioethanol",
+      "members": [
+        "mekanismgenerators:bioethanol",
+        "modern_industrialization:ethanol"
+      ],
+      "aliases": [
+        "mekanismgenerators:bioethanol",
+        "mekanismgenerators:flowing_bioethanol",
+        "modern_industrialization:ethanol"
+      ],
+      "buckets": [
+        "mekanismgenerators:bioethanol_bucket",
+        "modern_industrialization:ethanol_bucket"
+      ],
+      "tag": "c:ethanol"
+    },
+    {
+      "name": "molten_redstone",
+      "preferred": "modern_industrialization:molten_redstone",
+      "members": [
+        "cakesticklib:molten_redstone",
+        "modern_industrialization:molten_redstone"
+      ],
+      "aliases": [
+        "cakesticklib:molten_redstone",
+        "cakesticklib:molten_redstone_flowing",
+        "modern_industrialization:molten_redstone"
+      ],
+      "buckets": [
+        "cakesticklib:molten_redstone_bucket",
+        "modern_industrialization:molten_redstone_bucket"
+      ],
+      "tag": "c:molten_redstone"
+    }
+  ],
+  "chemicals": [
+    {
+      "name": "uu_matter",
+      "preferred": "mekmm:uu_matter",
+      "members": [
+        "mekmm:uu_matter"
+      ]
+    },
+    {
+      "name": "steam",
+      "preferred": "mekanism:steam",
+      "members": [
+        "mekanism:steam"
+      ]
+    },
+    {
+      "name": "hydrogen",
+      "preferred": "mekanism:hydrogen",
+      "members": [
+        "mekanism:hydrogen"
+      ]
+    },
+    {
+      "name": "oxygen",
+      "preferred": "mekanism:oxygen",
+      "members": [
+        "mekanism:oxygen"
+      ]
+    },
+    {
+      "name": "chlorine",
+      "preferred": "mekanism:chlorine",
+      "members": [
+        "mekanism:chlorine"
+      ]
+    },
+    {
+      "name": "sulfuric_acid",
+      "preferred": "mekanism:sulfuric_acid",
+      "members": [
+        "mekanism:sulfuric_acid"
+      ]
+    }
+  ],
+  "boundaries": {
+    "c:experience": "Experience fluids have different XP per mB contracts and distinct names; preserve native units.",
+    "states": "Solid, liquid and chemical UU remain separate forms, with the existing 1 solid to 500 chemical conversion."
+  },
+  "priority": [
+    "mekanism",
+    "mekmm",
+    "modern_industrialization",
+    "oritech",
+    "enderio",
+    "ltxi",
+    "neoecoae",
+    "iceandfire",
+    "cakesticklib",
+    "ic2"
+  ]
+}

@@ -12,6 +12,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.resources.*;
 import net.minecraft.core.registries.Registries;
 import local.sise.ores.*;
+import local.sise.compat.materials.RecipeSafety;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.ModifyRecipeJsonsEvent;
@@ -56,6 +57,13 @@ final class RecipeAudit {
         data.put("before_decode_errors", originalErrors); data.put("encode_errors", encodeErrors);
         data.put("item_tags", tags); data.put("classes", classes);
         data.put("items", BuiltInRegistries.ITEM.keySet().stream().map(Object::toString).sorted().toList());
+        var equipmentItems=new TreeMap<String,Object>();
+        for(var item:BuiltInRegistries.ITEM){
+            var stack=item.getDefaultInstance();var wearable=stack.get(net.minecraft.core.component.DataComponents.EQUIPPABLE);
+            String role=wearable!=null?"wearable/"+wearable.slot().getName():stack.has(net.minecraft.core.component.DataComponents.TOOL)?"tool":stack.has(net.minecraft.core.component.DataComponents.WEAPON)?"weapon":stack.getMaxDamage()>0?"durable":null;
+            if(role!=null)equipmentItems.put(BuiltInRegistries.ITEM.getKey(item).toString(),Map.of("role",role,"class",item.getClass().getName(),"max_damage",stack.getMaxDamage()));
+        }
+        data.put("equipment_items",equipmentItems);
         data.put("execution", execute(server, directory));
         var proxies = new TreeMap<String, JsonElement>();
         for (var type : aztech.modern_industrialization.machines.init.MIMachineRecipeTypes.getRecipeTypes()) {
@@ -85,7 +93,9 @@ final class RecipeAudit {
     }
 
     static ItemStack sample(Ingredient ingredient, int count) {
-        var candidates = ingredient.items().map(h -> new ItemStack(h.value(), count)).filter(ingredient::test).toList();
+        count=Math.max(count,local.sise.compat.BatchIngredient.count(ingredient));
+        final int required=count;
+        var candidates = ingredient.items().map(h -> new ItemStack(h.value(), required)).filter(ingredient::test).toList();
         return candidates.stream().filter(s -> BuiltInRegistries.ITEM.getKey(s.getItem()).getNamespace().equals("sise_ores"))
             .findFirst().orElseGet(() -> candidates.isEmpty() ? ItemStack.EMPTY : candidates.getFirst());
     }

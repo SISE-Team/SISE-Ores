@@ -14,6 +14,7 @@ public final class MaterialCatalog {
     }
     public static final List<Material> MATERIALS;
     public static final Map<String, Material> BY_SOURCE;
+    public static final Map<String, Material> BY_TARGET;
     public static final Map<String, Material> BY_OUTPUT_TAG;
     static {
         try (var stream = Objects.requireNonNull(MaterialCatalog.class.getResourceAsStream("/sise_ores/materials.json"));
@@ -32,6 +33,9 @@ public final class MaterialCatalog {
             }
             MATERIALS = List.copyOf(materials);
             BY_SOURCE = Collections.unmodifiableMap(sources);
+            var targets = new HashMap<String, Material>();
+            for (var material : materials) targets.put(material.target(), material);
+            BY_TARGET = Map.copyOf(targets);
             var tags = new HashMap<String, Material>();
             var ambiguous = new HashSet<String>();
             for (var m : materials) if (tags.putIfAbsent(m.tag(), m) != null) ambiguous.add(m.tag());

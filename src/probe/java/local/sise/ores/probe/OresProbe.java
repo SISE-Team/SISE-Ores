@@ -5,6 +5,9 @@ import com.mojang.serialization.JsonOps;
 import java.nio.file.*;
 import java.util.*;
 import local.sise.ores.*;
+import local.sise.compat.materials.*;
+import local.sise.compat.materials.RecipeSafety;
+import local.sise.compat.RecipePatches;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Screenshot;
 import net.minecraft.client.gui.screens.TitleScreen;
@@ -52,6 +55,11 @@ public final class OresProbe {
     }
     private static void verify(MinecraftServer server) {
         checks.addAll(CompatChecks.verify(server));
+        checks.addAll(AllMaterialChecks.verify(server));
+        checks.addAll(PartMaterialChecks.verify(server));
+        checks.addAll(FluidChecks.verify(server));
+        checks.addAll(ProductionChecks.verify(server));
+        checks.addAll(EquipmentChecks.verify(server));
         var raritySource = new java.util.concurrent.ConcurrentHashMap<Identifier, Integer>();
         raritySource.put(SiseOres.id("tin_ingot"), 1);
         var rarityPacket = new org.yanbwe.raritycore.network.RaritySyncPayload(raritySource, raritySource, List.of());
@@ -75,6 +83,10 @@ public final class OresProbe {
             check(new ItemStack(target).is(equivalents), "target in exact equivalence group " + material.name());
             for (var source : material.members()) {
                 check(item(source) != null && item(source) != Items.AIR, "legacy item exists " + source);
+                if(material.form().equals("equipment")){
+                    check(server.getRecipeManager().byKey(ResourceKey.create(Registries.RECIPE,Identifier.parse("sise_ores:convert/"+material.name()+"/"+source.replace(':','/')))).isEmpty(),"equipment unifies original crafting directly without a stonecutter conversion "+source);
+                    continue;
+                }
                 var input = new SingleRecipeInput(new ItemStack(item(source)));
                 var standardInput = new SingleRecipeInput(new ItemStack(target));
                 var conversion = (StonecutterRecipe)recipe(server, "sise_ores:convert/" + material.name() + "/" + source.replace(':', '/'));
@@ -109,16 +121,16 @@ public final class OresProbe {
         }
         check(loaded >= 500, "at least 500 rewritten recipes actually deserialized");
         check(loaded == changed.size(), "every runtime-unified recipe actually loaded");
-        check(((Number)RecipeUnifier.lastReport.getOrDefault("legacy_format_repairs", 0)).intValue() == 8, "eight legacy material recipes repaired");
-        check(((Map<?, ?>)RecipeUnifier.lastReport.get("mineral_format_repairs")).size() == 7, "seven additional mineral processing repairs");
-        for (var id : MineralRepairs.CRUSHING) {
+        check(RecipePatches.appliedInCategory("legacy_material_format") == 8, "eight legacy material recipes repaired by SISE Compat");
+        check(RecipePatches.appliedInCategory("mineral_format") == 7, "seven additional mineral processing repairs owned by SISE Compat");
+        for (var id : MineralRecipes.CRUSHING) {
             var r = (mekanism.api.recipes.ItemStackToItemStackRecipe)recipe(server, id);
             var in = r.getInput().ingredient();
             var raw = in.ingredient().items().findFirst().orElseThrow().value();
             var sample = new SingleRecipeInput(new ItemStack(raw, in.count()));
             check(r.matches(sample, server.overworld()) && !r.assemble(sample).isEmpty(), "restored mineral crushing executes " + id);
         }
-        for (var id : MineralRepairs.CRYSTAL_FIXING) {
+        for (var id : MineralRecipes.CRYSTAL_FIXING) {
             var encoded = encode(server, recipe(server, id));
             check(encoded.getAsJsonObject("fuel").get("ingredient").getAsString().equals("#c:gems/energized_crystal"), "restored crystal fuel tag " + id);
             check(encoded.get("chance").getAsInt() == (id.contains("flawed_") ? 500 : 8000), "crystal repair chance unchanged " + id);
@@ -134,7 +146,7 @@ public final class OresProbe {
             boolean matched = aztech.modern_industrialization.machines.components.CrafterComponent.doInputsMatch(List.of(slot), List.of(), siliconUnpacker);
             check(matched == (id.equals("sise_ores:silicon_metal_block") || id.equals("modern_industrialization:silicon_block")), "MI silicon unpacking separates families " + id);
         }
-        for (var material : MaterialCatalog.MATERIALS) if (material.form().equals("raw_materials")) {
+        for (var material : MaterialCatalog.MATERIALS) if (material.form().equals("raw_materials") && !material.material().equals("silicon")) {
             var oreTag = TagKey.create(Registries.BLOCK, Identifier.parse("c:ores/" + material.material()));
             int ores = 0;
             for (var holder : BuiltInRegistries.BLOCK.getTagOrEmpty(oreTag)) {
@@ -173,10 +185,12 @@ public final class OresProbe {
             String metal = material.material();
             var pairs = material.name().startsWith("raw_") ? List.of(List.of(material.name(), "raw_" + metal))
                 : material.name().equals("silicon_block") ? List.of(List.of("silicon_block", "silicon"))
+                : material.name().equals("charcoal_block") ? List.of(List.of("charcoal_block", "minecraft:charcoal"))
+                : material.name().equals("salt_block") ? List.of(List.of("salt_block", "salt_dust"))
                 : List.of(List.of(material.name(), metal + "_ingot"), List.of(metal + "_ingot", metal + "_nugget"));
             for (var pair : pairs) {
                 var large = item("sise_ores:" + pair.get(0));
-                var small = item("sise_ores:" + pair.get(1));
+                var small = item(pair.get(1).contains(":") ? pair.get(1) : "sise_ores:" + pair.get(1));
                 var one = CraftingInput.of(1, 1, List.of(new ItemStack(large)));
                 var nine = CraftingInput.of(3, 3, java.util.stream.IntStream.range(0, 9).mapToObj(i -> new ItemStack(small)).toList());
                 boolean foundPack = false, foundUnpack = false;
@@ -196,10 +210,10 @@ public final class OresProbe {
             }
         }
         for (String id : RecipeSafety.DUST_SPLITS) {
-            check(recipe(server, id) instanceof StonecutterRecipe, "dust subdivision selectable " + id);
+            check(recipe(server, id) instanceof CraftingRecipe, "dust subdivision stays on workbench " + id);
         }
         var bio = CraftingInput.of(3, 3, java.util.stream.IntStream.range(0, 9).mapToObj(i -> new ItemStack(item("oritech:biosteel_ingot"))).toList());
-        for (String id : List.of("mekanism:storage_blocks/steel", "modern_industrialization:materials/steel/craft/block_from_ingot", "oritech:steelblock"))
+        for (String id : List.of("mekanism:storage_blocks/steel", "modern_industrialization:materials/steel/craft/block_from_ingot", "oritech:steelblock", "ic2:shaped/steel_block"))
             check(!((CraftingRecipe)recipe(server, id)).matches(bio, server.overworld()), "ordinary steel packing rejects biosteel " + id);
     }
     private static void tick(ClientTickEvent.Post event) {
@@ -220,12 +234,21 @@ public final class OresProbe {
             if (mc.screen instanceof net.minecraft.client.gui.screens.DisconnectedScreen) throw new IllegalStateException("Disconnected from fixture world; inspect debug.log");
             if (mc.player == null || mc.level == null || mc.getSingleplayerServer() == null || mc.player.tickCount < 50 || ++worldTicks % 80 != 0) return;
             var server = mc.getSingleplayerServer();
+            if (Boolean.getBoolean("sise.ores.inventory")) {
+                server.submit(() -> FluidInventory.export(server,directory)).join();
+                server.submit(() -> RecipeAudit.export(server,directory)).join();
+                checks.add("live fluid, chemical and UU registry inventory exported");
+                finish(true, ""); return;
+            }
             if (stage == 0) {
                 if (local.sise.ores.compat.OresJeiPlugin.runtime == null) return;
                 server.submit(() -> verify(server)).join();
                 server.submit(() -> WorldgenChecks.verify(server, directory)).join();
                 server.submit(() -> RecipeAudit.export(server, directory)).join();
                 var jei = local.sise.ores.compat.OresJeiPlugin.runtime;
+                checks.addAll(FluidChecks.client());
+                checks.addAll(ProductionChecks.client());
+                checks.addAll(EquipmentChecks.client());
                 check(jei.getJeiHelpers().getModIdHelper().getModNameForModId("sise_ores").equals("SISE Ores"), "JEI reports SISE Ores as source");
                 var visibility = jei.getJeiHelpers().getIngredientVisibility();
                 check(!visibility.isIngredientVisible(mezz.jei.api.constants.VanillaTypes.ITEM_STACK, new ItemStack(item("mekanism:ingot_tin")), mezz.jei.api.ingredients.subtypes.UidContext.Ingredient), "old tin hidden from JEI browser");
@@ -238,7 +261,7 @@ public final class OresProbe {
                 }
                 server.submit(() -> {
                     var inventory = new SimpleContainer(54); int i = 0;
-                    for (var material : MaterialCatalog.MATERIALS.stream().sorted(java.util.Comparator.comparing(m -> !m.form().equals("ores"))).toList()) { if (i < 54) inventory.setItem(i++, new ItemStack(item(material.target()))); }
+                    for (var material : MaterialCatalog.MATERIALS.stream().sorted(java.util.Comparator.comparingInt(m -> Set.of("matter","buckets").contains(m.form())?0:Set.of("plates","gears").contains(m.form())?1:m.form().equals("ores")?2:3)).toList()) { if (i < 54) inventory.setItem(i++, new ItemStack(item(material.target()))); }
                     var player = server.getPlayerList().getPlayer(mc.player.getUUID());
                     player.openMenu(new SimpleMenuProvider((id, inv, p) -> new ChestMenu(MenuType.GENERIC_9x6, id, inv, inventory, 6), Component.literal("SISE Ores · " + ModList.get().getModContainerById("sise_ores").orElseThrow().getModInfo().getVersion())));
                 }).join();

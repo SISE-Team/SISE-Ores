@@ -25,9 +25,12 @@ public final class SiseOres {
     public static final Map<String, DeferredBlock<Block>> MATERIAL_BLOCKS = new LinkedHashMap<>();
     static {
         LOOT.register("materials", () -> MaterialLootModifier.CODEC);
+        UnifiedFluids.registerEntries();
         for (var material : MaterialCatalog.MATERIALS) {
             if (!material.owned()) continue;
-            if (material.form().equals("ores")) {
+            if (material.form().equals("buckets")) {
+                MATERIAL_ITEMS.put(material.name(),UnifiedFluids.BUCKETS.get(material.name().substring(0,material.name().length()-7)));
+            } else if (material.form().equals("ores")) {
                 java.util.function.Supplier<Block> source = () -> Objects.requireNonNull(BuiltInRegistries.BLOCK.getValue(Identifier.parse(material.preferred())));
                 DeferredBlock<Block> block = BLOCKS.registerBlock(material.name(), props -> new UnifiedOreBlock(props, source.get()),
                     () -> BlockBehaviour.Properties.ofFullCopy(source.get())
@@ -36,11 +39,16 @@ public final class SiseOres {
                 MATERIAL_BLOCKS.put(material.name(), block);
                 MATERIAL_ITEMS.put(material.name(), ITEMS.registerSimpleBlockItem(block));
             } else if (material.form().equals("storage_blocks")) {
-                var block = BLOCKS.registerSimpleBlock(material.name(), props -> props.strength(5, 6).sound(SoundType.METAL).requiresCorrectToolForDrops());
+                java.util.function.Supplier<Block> source = () -> Objects.requireNonNull(BuiltInRegistries.BLOCK.getValue(Identifier.parse(material.preferred())));
+                var block = BLOCKS.registerBlock(material.name(), Block::new,
+                    () -> BlockBehaviour.Properties.ofFullCopy(source.get())
+                        .overrideLootTable(Optional.of(ResourceKey.create(Registries.LOOT_TABLE, id("blocks/" + material.name()))))
+                        .overrideDescription("block.sise_ores." + material.name()));
                 MATERIAL_BLOCKS.put(material.name(), block);
                 MATERIAL_ITEMS.put(material.name(), ITEMS.registerSimpleBlockItem(block));
             } else {
-                MATERIAL_ITEMS.put(material.name(), ITEMS.registerSimpleItem(material.name()));
+                MATERIAL_ITEMS.put(material.name(), material.form().equals("matter")?
+                    ITEMS.registerSimpleItem(material.name(),p->p.rarity(Rarity.EPIC)):ITEMS.registerSimpleItem(material.name()));
             }
         }
         TABS.register("materials", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.sise_ores"))
@@ -50,6 +58,15 @@ public final class SiseOres {
     public static Identifier id(String name) { return Identifier.fromNamespaceAndPath(ID, name); }
     public SiseOres(IEventBus bus) {
         BLOCKS.register(bus); ITEMS.register(bus); TABS.register(bus); LOOT.register(bus);
-        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, RecipeUnifier::onRecipes);
+        UnifiedFluids.FLUIDS.register(bus);UnifiedFluids.CHEMICALS.register(bus);
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOW, RecipeUnifier::onRecipes);
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, SiseOres::onFuel);
+    }
+    private static void onFuel(net.neoforged.neoforge.event.furnace.FurnaceFuelBurnTimeEvent event) {
+        var material = MaterialCatalog.BY_TARGET.get(BuiltInRegistries.ITEM.getKey(event.getItemStack().getItem()).toString());
+        if (material == null || !material.owned()) return;
+        var source = BuiltInRegistries.ITEM.getValue(Identifier.parse(material.preferred()));
+        if (source != null && source != Items.AIR)
+            event.setBurnTime(new ItemStack(source).getBurnTime(event.getRecipeType(), event.getFuelValues()));
     }
 }

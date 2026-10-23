@@ -45,8 +45,15 @@ final class WorldgenChecks {
                 o.addProperty("blockId", OreWorldgen.SOURCES.get(o.get("blockId").getAsString()).target());
             if (o.has("boulderOres")) {
                 var ores=o.getAsJsonArray("boulderOres");
-                for(int i=0;i<ores.size();i++) if(OreWorldgen.SOURCES.containsKey(ores.get(i).getAsString()))
-                    ores.set(i,new JsonPrimitive(OreWorldgen.SOURCES.get(ores.get(i).getAsString()).target()));
+                for(int i=0;i<ores.size();i++) {
+                    var entry=ores.get(i);
+                    if(entry.isJsonPrimitive() && OreWorldgen.SOURCES.containsKey(entry.getAsString()))
+                        ores.set(i,new JsonPrimitive(OreWorldgen.SOURCES.get(entry.getAsString()).target()));
+                    else if(entry.isJsonObject() && entry.getAsJsonObject().has("block")) {
+                        var weighted=entry.getAsJsonObject();var source=weighted.get("block").getAsString();
+                        if(OreWorldgen.SOURCES.containsKey(source))weighted.addProperty("block",OreWorldgen.SOURCES.get(source).target());
+                    }
+                }
             }
             o.entrySet().forEach(e -> normalizeJson(e.getValue()));
         }
@@ -85,7 +92,7 @@ final class WorldgenChecks {
             var level = server.overworld();
             var ops = server.registryAccess().createSerializationContext(JsonOps.INSTANCE);
             var ores = MaterialCatalog.MATERIALS.stream().filter(m -> m.form().equals("ores")).toList();
-            check(ores.size()==20 && OreWorldgen.SOURCES.size()==35,"20 reviewed ore variants from 35 legacy blocks");
+            check(ores.size()==20 && OreWorldgen.SOURCES.size()==41,"20 reviewed ore variants from 41 legacy blocks including IC2CE");
             var registry = server.registryAccess().lookupOrThrow(Registries.CONFIGURED_FEATURE);
             var features = new TreeMap<String,JsonElement>();
             for (var holder : registry.listElements().toList()) {
